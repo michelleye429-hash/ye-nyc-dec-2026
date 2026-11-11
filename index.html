@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NYC Family Trip, Dec 5–11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Yellowtail&family=Noto+Serif+SC:wght@500;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pine: #A81E2D;
+  --pine-deep: #7A1220;
+  --pine-mid: #C23545;
+  --evergreen: #1C4A35;
+  --paper: #F7EEDB;
+  --paper-2: #EFE2C4;
+  --ink: #2B1E16;
+  --muted: #6B5A48;
+  --line: #E0D0AE;
+  --cranberry: #B1283A;
+  --gold: #F3CD78;
+  --on-pine: #FFF4E0;
+  --on-pine-muted: #F4D9CB;
+  --stamp: #F7EEDB;
+  --stamp-ink: #2B1E16;
+  --card-script: #A81E2D;
+  --card-title: #1C4A35;
+  --c-travel: #7A8790;
+  --c-food: #C98B1A;
+  --c-sight: #2F7A55;
+  --c-show: #B1283A;
+  --c-rest: #8E9CB5;
+  --slab: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, "Times New Roman", serif;
+  --script-font: "Yellowtail", "Brush Script MT", cursive;
+  --sans: "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: only light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html[lang="zh-CN"] {
+  --slab: "Noto Serif SC", "Songti SC", "STSong", "SimSun", "Noto Serif CJK SC", serif;
+  --script-font: "Ma Shan Zheng", "STKaiti", "Kaiti SC", "KaiTi", cursive;
+}
+html[lang="zh-CN"] body { line-height: 1.65; }
+html[lang="zh-CN"] .title { letter-spacing: .14em; font-weight: 700; }
+html[lang="zh-CN"] .greet { letter-spacing: .02em; font-size: clamp(1.7rem, 7.2vw, 2.6rem); }
+html[lang="zh-CN"] .day-head .date { font-weight: 700; }
+html[lang="zh-CN"] .group-title { font-weight: 700; }
+*, *::before, *::after { box-sizing: inherit; }
+html { background: var(--pine); scroll-padding-top: env(safe-area-inset-top, 0px); }
+body {
+  margin: 0;
+  background: var(--pine);
+  color: var(--on-pine);
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  min-height: 100vh;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--pine);
+}
+a { color: inherit; }
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 8px; }
+.wrap { max-width: 44rem; margin: 0 auto; }
+
+/* Postcard header */
+.hero { padding: 1rem 1rem 1.4rem; background: var(--pine); }
+.frame {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 9px;
+  border-radius: 6px;
+  background: repeating-linear-gradient(-45deg,
+    var(--evergreen) 0 12px, #F1E6CC 12px 22px,
+    var(--pine-deep) 22px 34px, #F1E6CC 34px 44px);
+  box-shadow: 0 4px 0 rgba(0, 0, 0, .22);
+}
+.postcard {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 40%, transparent 55%, rgba(120, 80, 30, .10)),
+    var(--paper);
+  color: var(--ink);
+  padding: 1.3rem 1.2rem 1.25rem;
+  border-radius: 2px;
+}
+.postmark {
+  position: absolute;
+  top: .8rem;
+  right: .9rem;
+  width: 5.2rem;
+  height: 5.2rem;
+  border: 2px solid var(--card-script);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: .58rem;
+  line-height: 1.25;
+  letter-spacing: .08em;
+  color: var(--card-script);
+  opacity: .6;
+  transform: rotate(14deg);
+}
+.postmark strong { font-family: var(--slab); font-weight: 600; font-size: .82rem; letter-spacing: .02em; }
+.postmark::after {
+  content: "";
+  position: absolute;
+  right: 96%;
+  top: 50%;
+  width: 3.2rem;
+  height: 1.5rem;
+  transform: translateY(-50%);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='27' viewBox='0 0 72 27'%3E%3Cg fill='none' stroke='%23000' stroke-width='2'%3E%3Cpath d='M0 4q9-4 18 0t18 0 18 0 18 0'/%3E%3Cpath d='M0 13.5q9-4 18 0t18 0 18 0 18 0'/%3E%3Cpath d='M0 23q9-4 18 0t18 0 18 0 18 0'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain;
+  opacity: .7;
+}
+.hero h1 { margin: 0; position: relative; z-index: 1; font-weight: 400; }
+.greet {
+  display: block;
+  font-family: var(--script-font);
+  font-size: clamp(2rem, 8vw, 2.8rem);
+  line-height: 1;
+  color: var(--card-script);
+  transform: rotate(-4deg);
+  transform-origin: left bottom;
+  margin: 0 0 .3rem .1rem;
+}
+.title {
+  display: block;
+  font-family: var(--slab);
+  font-weight: 500;
+  font-size: clamp(3rem, 14.5vw, 5.2rem);
+  line-height: 1;
+  color: var(--card-title);
+}
+.sub { margin: .9rem 0 0; font-size: 1.08rem; font-weight: 700; color: var(--ink); }
+.facts { display: flex; flex-wrap: wrap; gap: .4rem 1.3rem; margin: .5rem 0 0; padding: 0; list-style: none; font-size: .95rem; color: var(--muted); }
+.facts strong { color: var(--ink); }
+
+/* Stamp strip */
+.days {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 5;
+  background: var(--pine-deep);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, .18);
+}
+.days .wrap {
+  display: flex;
+  gap: .55rem;
+  overflow-x: auto;
+  padding: .75rem 1.1rem .85rem;
+  scrollbar-width: none;
+}
+.days .wrap::-webkit-scrollbar { display: none; }
+.stamp {
+  --r: .2rem;
+  flex: 0 0 auto;
+  width: 4.2rem;
+  height: 4.8rem;
+  padding: calc(2 * var(--r));
+  background: var(--stamp);
+  color: var(--stamp-ink);
+  text-decoration: none;
+  -webkit-mask:
+    radial-gradient(var(--r), #0000 98%, #000) round calc(-1.5 * var(--r)) calc(-1.5 * var(--r)) / calc(3 * var(--r)) calc(3 * var(--r)),
+    linear-gradient(#000 0 0) center / calc(100% - 4 * var(--r) + 3px) calc(100% - 4 * var(--r) + 3px) no-repeat;
+  mask:
+    radial-gradient(var(--r), #0000 98%, #000) round calc(-1.5 * var(--r)) calc(-1.5 * var(--r)) / calc(3 * var(--r)) calc(3 * var(--r)),
+    linear-gradient(#000 0 0) center / calc(100% - 4 * var(--r) + 3px) calc(100% - 4 * var(--r) + 3px) no-repeat;
+  transition: transform .2s;
+}
+.stamp:focus-visible { outline: none; }
+.stamp-inner {
+  height: 100%;
+  border: 1px solid rgba(43, 30, 22, .35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .1rem;
+}
+.stamp:focus-visible .stamp-inner { outline: 3px solid var(--gold); outline-offset: -4px; }
+.stamp .wd { font-size: .78rem; line-height: 1.1; font-weight: 700; }
+.stamp .num { font-family: var(--slab); font-weight: 600; font-size: 1.6rem; line-height: 1.05; }
+.stamp.ideas .num { font-family: var(--sans); font-weight: 700; font-size: .78rem; line-height: 1.1; }
+.stamp[aria-current="page"] { background: var(--evergreen); color: #FFF5E4; transform: rotate(-4deg) translateY(-1px); }
+.stamp[aria-current="page"] .stamp-inner { border-color: rgba(255, 245, 228, .55); }
+.stamp.is-today:not([aria-current="page"]) .wd { color: #A81E2D; }
+
+/* Day view */
+main { padding: 1.7rem 1.1rem 2.5rem; }
+.day-head h2 { margin: 0; font-weight: 400; }
+.day-head .script {
+  display: block;
+  font-family: var(--script-font);
+  font-size: clamp(2rem, 7vw, 2.5rem);
+  line-height: 1;
+  color: var(--gold);
+  transform: rotate(-3deg);
+  transform-origin: left bottom;
+}
+.day-head .date {
+  display: block;
+  font-family: var(--slab);
+  font-weight: 500;
+  font-size: clamp(1.7rem, 6.5vw, 2.4rem);
+  line-height: 1.1;
+  margin-top: .2rem;
+  color: var(--on-pine);
+}
+.tag {
+  position: relative;
+  display: inline-block;
+  margin-top: .8rem;
+  padding: .3rem .9rem .3rem 1.45rem;
+  background: var(--evergreen);
+  color: #FFF5E4;
+  font-weight: 700;
+  font-size: .95rem;
+  clip-path: polygon(.75rem 0, 100% 0, 100% 100%, .75rem 100%, 0 50%);
+}
+.tag::before {
+  content: "";
+  position: absolute;
+  left: .6rem;
+  top: 50%;
+  width: .38rem;
+  height: .38rem;
+  margin-top: -.19rem;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.intro { color: var(--on-pine-muted); margin: .7rem 0 0; }
+
+.timeline { list-style: none; margin: 1.6rem 0 0; padding: 0; }
+.item {
+  display: grid;
+  grid-template-columns: 5.3rem 1fr;
+  gap: 0 .85rem;
+  padding: 0 0 1.1rem;
+}
+.time { text-align: right; color: var(--gold); font-weight: 700; padding-top: .95rem; font-size: 1rem; white-space: nowrap; }
+.card {
+  background: var(--paper);
+  color: var(--ink);
+  border-left: 6px solid var(--cat, var(--c-sight));
+  border-radius: 4px 10px 10px 4px;
+  padding: .8rem 1rem .9rem;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .2);
+}
+.cat { font-size: .85rem; color: var(--muted); display: flex; align-items: center; gap: .4rem; }
+.cat::before { content: ""; width: .55rem; height: .55rem; border-radius: 50%; background: var(--cat); }
+.card h3 { margin: .15rem 0 0; font-size: 1.18rem; line-height: 1.3; font-weight: 700; }
+.card p { margin: .35rem 0 0; color: var(--muted); font-size: 1rem; }
+.links { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem; }
+.links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: .4rem 1rem;
+  border-radius: 999px;
+  background: var(--paper-2);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: .98rem;
+}
+.links a:hover { text-decoration: underline; }
+.item.rest .card {
+  background: transparent;
+  color: var(--on-pine-muted);
+  border: 1.5px dashed rgba(246, 236, 214, .35);
+  border-left: 6px solid var(--cat);
+  box-shadow: none;
+  padding: .55rem 1rem;
+}
+.item.rest h3 { font-weight: 700; font-size: 1.18rem; }
+.item.rest .card h3 { color: var(--on-pine); }
+.item.rest .time { padding-top: .6rem; color: var(--on-pine-muted); }
+.next-up { display: inline-block; margin-left: .45rem; padding: .05rem .55rem; border-radius: 999px; background: var(--gold); color: #2B1E16; font-size: .8rem; font-weight: 700; vertical-align: middle; }
+
+/* Ideas */
+.group { margin-top: 1.9rem; }
+.group-title { font-family: var(--slab); font-weight: 500; font-size: 1.4rem; margin: 0 0 .75rem; color: var(--on-pine); }
+.idea-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+.idea {
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 10px;
+  padding: .8rem 1rem .9rem;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, .2);
+}
+.idea h4 { margin: 0; font-size: 1.18rem; }
+.idea p { margin: .25rem 0 0; color: var(--muted); font-size: 1rem; }
+
+footer { padding: .5rem 1.1rem 3rem; color: var(--on-pine-muted); font-size: .92rem; }
+footer .sign { display: block; font-family: var(--script-font); font-size: 1.9rem; color: var(--gold); line-height: 1.1; margin-bottom: .2rem; }
+
+.lang-row { max-width: 44rem; margin: 0 auto .7rem; display: flex; justify-content: flex-end; }
+.lang { display: inline-flex; padding: 3px; border-radius: 999px; background: rgba(0, 0, 0, .22); border: 1px solid rgba(255, 244, 224, .38); }
+.lang button {
+  min-height: 44px; min-width: 5rem; padding: 0 1.1rem; border: 0; border-radius: 999px;
+  background: transparent; color: var(--on-pine); font: 700 1rem var(--sans); cursor: pointer;
+}
+.lang button[aria-pressed="true"] { background: var(--evergreen); color: #FFF5E4; }
+.lang button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.period { display: block; font-size: .8rem; line-height: 1.1; font-weight: 700; }
+.card p.note, .idea p.note { color: var(--muted); font-weight: 400; font-size: 1rem; }
+.card p.desc, .idea p.desc { color: var(--muted); }
+.card p.en-name, .idea p.en-name { margin: .05rem 0 0; font-size: .92rem; color: var(--muted); }
+.item.rest .time .period { color: var(--on-pine-muted); }
+.item.rest .card p.note { color: var(--on-pine-muted); font-weight: 400; margin-top: .1rem; }
+@keyframes slideNext { from { opacity: 0; transform: translateX(32px); } to { opacity: 1; transform: none; } }
+@keyframes slidePrev { from { opacity: 0; transform: translateX(-32px); } to { opacity: 1; transform: none; } }
+.slide-next { animation: slideNext .28s ease-out; }
+.slide-prev { animation: slidePrev .28s ease-out; }
+@media (prefers-reduced-motion: reduce) { .slide-next, .slide-prev { animation: none; } }
+.links button {
+  display: inline-flex; align-items: center; min-height: 44px; padding: .4rem 1rem; border-radius: 999px;
+  background: var(--paper-2); border: 1px solid var(--line); color: var(--ink);
+  font: inherit; font-weight: 700; font-size: .98rem; cursor: pointer;
+}
+.links button:hover { text-decoration: underline; }
+.links button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.mapsheet { position: fixed; inset: 0; z-index: 40; display: flex; align-items: flex-end; justify-content: center; background: rgba(20, 5, 8, .62); }
+.mapsheet[hidden] { display: none; }
+.ms-panel {
+  width: 100%; max-width: 28rem; background: var(--paper); color: var(--ink);
+  border-radius: 18px 18px 0 0; padding: 1.2rem 1.1rem calc(1rem + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, .35);
+}
+@media (min-width: 600px) { .mapsheet { align-items: center; } .ms-panel { border-radius: 18px; padding-bottom: 1rem; } }
+.ms-title { margin: 0; font-family: var(--slab); font-weight: 500; font-size: 1.35rem; line-height: 1.25; }
+.ms-dest { margin: .25rem 0 .9rem; color: var(--muted); }
+.ms-opt {
+  display: flex; align-items: center; justify-content: center; min-height: 52px; margin-top: .55rem;
+  border-radius: 12px; background: var(--evergreen); color: #FFF5E4; font-weight: 700; font-size: 1.05rem; text-decoration: none;
+}
+.ms-opt:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.ms-cancel { display: block; width: 100%; min-height: 48px; margin-top: .6rem; border: 0; background: transparent; color: var(--muted); font: 700 1rem var(--sans); cursor: pointer; }
+.info-list { display: grid; gap: 1rem; margin-top: 1.5rem; }
+.info-list .card h3 { margin: 0 0 .3rem; }
+.plain { list-style: none; margin: .3rem 0 0; padding: 0; }
+.plain li { margin: .25rem 0; color: var(--muted); font-size: 1rem; }
+.plain strong { font-weight: 400; color: inherit; }
+.steps { margin: .6rem 0 0; padding-left: 1.3rem; }
+.steps li { margin: .4rem 0; color: var(--muted); font-size: 1rem; }
+.code { display: flex; align-items: center; justify-content: space-between; gap: .8rem; flex-wrap: wrap; margin-top: .8rem; padding: .6rem .8rem; border: 2px dashed var(--line); border-radius: 12px; background: var(--paper-2); }
+.code-val { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-weight: 700; font-size: 1.5rem; letter-spacing: .12em; user-select: all; -webkit-user-select: all; }
+.copy-btn { min-height: 44px; padding: 0 1.1rem; border: 0; border-radius: 999px; background: var(--evergreen); color: #FFF5E4; font: 700 1rem var(--sans); cursor: pointer; }
+.copy-btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+.split { margin-top: .9rem; padding-left: .9rem; border-left: 3px dotted rgba(255, 244, 224, .6); }
+.split-label { margin: 0 0 .7rem; color: var(--on-pine-muted); font-size: .95rem; }
+.split-list { list-style: none; margin: 0; padding: 0; }
+.split-list > li { margin-bottom: .9rem; }
+.split-list > li:last-child { margin-bottom: 0; }
+.split-time { color: var(--gold); font-weight: 700; font-size: .95rem; margin: 0 0 .25rem; }
+.item.rest .split .card {
+  background: var(--paper); color: var(--ink); border: 0; border-left: 6px solid var(--cat);
+  border-radius: 4px 10px 10px 4px; box-shadow: 0 3px 0 rgba(0, 0, 0, .2); padding: .8rem 1rem .9rem;
+}
+.item.rest .split .card h3 { font-weight: 700; font-size: 1.18rem; color: var(--ink); }
+.item.rest .split .card p.note { color: var(--muted); font-weight: 400; margin-top: .35rem; }
+.item.rest .split .card p.desc { color: var(--muted); }
+.tagtile {
+  position: relative; flex: 0 0 auto; width: 4.9rem; height: 4.7rem;
+  background: var(--gold); color: #2A1C02; text-decoration: none;
+  clip-path: polygon(24% 0, 76% 0, 100% 24%, 100% 100%, 0 100%, 0 24%);
+  transition: transform .2s;
+}
+.tagtile::before { content: ""; position: absolute; top: .42rem; left: 50%; width: .62rem; height: .62rem; margin-left: -.31rem; border-radius: 50%; background: var(--pine-deep); }
+.tagtile .tag-inner { position: absolute; inset: 1.35rem .4rem .35rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; line-height: 1.15; }
+.tagtile .t1 { font-family: var(--sans); font-weight: 700; font-size: .8rem; }
+.tagtile .t2 { font-family: var(--sans); font-weight: 700; font-size: .8rem; }
+.tagtile:focus-visible { outline: none; }
+.tagtile:focus-visible .tag-inner { outline: 3px solid var(--evergreen); outline-offset: 1px; }
+.tagtile[aria-current="page"] { background: var(--evergreen); color: #FFF5E4; transform: rotate(-4deg) translateY(-1px); }
+.tagtile + .stamp { margin-left: .35rem; }
+.stamp-inner { position: relative; }
+.stamp[aria-current="page"] .stamp-inner::after {
+  content: ""; position: absolute; top: .06rem; right: .06rem; width: .85rem; height: .85rem;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.8l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 16.8l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z' fill='%23F2B632' stroke='%23FFF5E4' stroke-width='1.3' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+@media (prefers-reduced-motion: reduce) { .tagtile { transition: none; } }
+.tips { margin: .5rem 0 0; padding-left: 1.2rem; }
+.tips li { margin: .45rem 0; color: var(--muted); font-size: 1rem; }
+.tagtile.luggage { --bag: var(--gold); clip-path: none; background: none; }
+.tagtile.luggage[aria-current="page"] { --bag: var(--evergreen); background: none; }
+.tagtile.luggage::before {
+  top: 0; left: 50%; width: 1.7rem; height: 1rem; margin-left: -.85rem;
+  border-radius: .55rem .55rem 0 0; background: transparent; border: .24rem solid var(--bag); border-bottom: 0;
+}
+.tagtile.luggage::after {
+  content: ""; position: absolute; left: 0; right: 0; top: .72rem; bottom: .3rem; border-radius: .75rem;
+  background:
+    linear-gradient(90deg, transparent .75rem, rgba(43, 30, 22, .28) .75rem .9rem, transparent .9rem calc(100% - .9rem), rgba(43, 30, 22, .28) calc(100% - .9rem) calc(100% - .75rem), transparent calc(100% - .75rem)),
+    var(--bag);
+}
+.tagtile.luggage .tag-inner { z-index: 1; inset: 1.05rem 1rem .5rem; }
+.tagtile.luggage .t1, .tagtile.luggage .t2 { font-size: .8rem; }
+.tagtile.luggage .wheel { position: absolute; bottom: 0; width: .55rem; height: .4rem; background: #2B1E16; border-radius: 0 0 .25rem .25rem; }
+.tagtile.luggage .w1 { left: .9rem; }
+.tagtile.luggage .w2 { right: .9rem; }
+.bf-list { list-style: none; margin: .9rem 0 0; padding: 0; }
+.bf { margin-top: .9rem; padding-top: .9rem; border-top: 1px dashed var(--line); }
+.bf:first-child { margin-top: 0; padding-top: 0; border-top: 0; }
+.bf h4 { margin: 0; font-size: 1.05rem; font-weight: 700; color: var(--ink); }
+.bf .links { margin-top: .6rem; }
+.notetile {
+  position: relative; flex: 0 0 auto; width: 4.5rem; height: 4.5rem; margin-left: .35rem; align-self: center;
+  background: #FFF1A6; color: #2A1C02; text-decoration: none; transform: rotate(3deg);
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%); transition: transform .2s;
+}
+.notetile::after { content: ""; position: absolute; right: 0; bottom: 0; width: 30%; height: 30%; background: #E3CB63; clip-path: polygon(0 0, 100% 0, 0 100%); }
+.notetile .tag-inner { position: absolute; inset: .45rem .4rem .55rem .45rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; line-height: 1.15; }
+.notetile .t1 { font-family: var(--sans); font-weight: 700; font-size: .8rem; }
+.notetile .t2 { font-family: var(--sans); font-weight: 700; font-size: .8rem; }
+.notetile:focus-visible { outline: none; }
+.notetile:focus-visible .tag-inner { outline: 3px solid var(--evergreen); outline-offset: 1px; }
+.notetile[aria-current="page"] { background: var(--evergreen); color: #FFF5E4; transform: rotate(-3deg) translateY(-1px); }
+.notetile[aria-current="page"]::after { background: #123426; }
+.tips.todo, .tips.done { list-style: none; padding-left: 0; }
+.tips.todo li, .tips.done li { position: relative; padding-left: 1.6rem; }
+.tips.todo li::before { content: "\2610"; position: absolute; left: 0; color: var(--ink); }
+.tips.done li::before { content: "\2713"; position: absolute; left: .1rem; color: var(--c-sight); font-weight: 700; }
+@media (prefers-reduced-motion: reduce) { .notetile { transition: none; } }
+#snow { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 30; }
+
+@media (max-width: 420px) {
+  .postmark::after { display: none; }
+  .postmark { width: 4.3rem; height: 4.3rem; font-size: .5rem; }
+  .postmark strong { font-size: .7rem; }
+  .item { grid-template-columns: 4.6rem 1fr; gap: 0 .6rem; }
+  .time { font-size: .92rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stamp { transition: none; }
+}
+</style>
+</head>
+<body>
+<canvas id="snow" aria-hidden="true"></canvas>
+
+<div class="mapsheet" id="mapsheet" hidden>
+  <div class="ms-panel" role="dialog" aria-modal="true" aria-labelledby="ms-title">
+    <p class="ms-title" id="ms-title"></p>
+    <p class="ms-dest"></p>
+    <a class="ms-opt" data-app="google" target="_blank" rel="noopener"></a>
+    <a class="ms-opt" data-app="apple" target="_blank" rel="noopener"></a>
+    <button type="button" class="ms-cancel"></button>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="lang-row">
+    <div class="lang" role="group" aria-label="Language 语言">
+      <button type="button" data-lang="en" aria-pressed="true">English</button>
+      <button type="button" data-lang="zh" aria-pressed="false">中文</button>
+    </div>
+  </div>
+  <div class="frame">
+    <div class="postcard">
+      <div class="postmark" aria-hidden="true">
+        <span id="pm1">NEW YORK, N.Y.</span>
+        <strong id="pm2">DEC 5–11</strong>
+        <span id="pm3">2026</span>
+      </div>
+      <h1>
+        <span class="greet" id="h-greet">Greetings from</span>
+        <span class="title" id="h-title">New York</span>
+      </h1>
+      <p class="sub" id="h-sub">Our family Christmas trip, December 5–11, 2026</p>
+    </div>
+  </div>
+</header>
+
+<nav class="days" id="nav" aria-label="Choose a day">
+  <div class="wrap" id="tiles"></div>
+</nav>
+
+<main>
+  <div class="wrap" id="view" tabindex="-1"></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="sign" id="f-sign">Happy holidays!</span>
+    <span id="f-text">Plans may shift. Check back here for the latest version.</span>
+  </div>
+</footer>
+
+<script>
+const maps = q => "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(q);
+const T = (en, zh) => ({ en, zh });
+
+function getLang() {
+  try { const v = localStorage.getItem("nyc-lang"); if (v === "en" || v === "zh") return v; } catch (e) {}
+  return (navigator.language || "").toLowerCase().startsWith("zh") ? "zh" : "en";
+}
+let lang = getLang();
+const tr = x => (x && typeof x === "object") ? x[lang] : x;
+
+const UI = {
+  greet: T("Greetings from", "圣诞问候，来自"),
+  title: T("New York", "纽约"),
+  sub: T("Ye Family Christmas Trip", "叶家圣诞之旅"),
+  temp: T("Avg Temp: <strong>30–45°F</strong>, so bring warm layers", "平均气温：<strong>30–45°F（约 −1 至 7°C）</strong>，请带保暖衣物"),
+  rise: T("Sunrise <strong>~7:00 AM</strong>", "日出 <strong>约早上7:00</strong>"),
+  set: T("Sunset <strong>~4:30 PM</strong>", "日落 <strong>约下午4:30</strong>"),
+  pm1: T("NEW YORK, N.Y.", "纽约"),
+  pm2: T("DEC 5–11", "12月5–11日"),
+  pm3: T("2026", "2026"),
+  today: T("Today", "今天"),
+  more: T("More", "更多"),
+  ideas: T("Ideas", "推荐"),
+  nav: T("Choose a day", "选择日期"),
+  dir: T("Directions", "路线"),
+  next: T("Next up", "接下来"),
+  ideasIntro: T("Places we might fit in if there’s time.", "时间允许的话，我们还可以去这些地方。"),
+  seeTitle: T("Places to see", "值得一看的地方"),
+  eatTitle: T("Places to eat and drink", "吃喝推荐"),
+  sign: T("Happy holidays!", "节日快乐！"),
+  foot: T("Plans may shift. Check back here for the latest version.", "行程可能会有变动，请随时回来查看最新版本。"),
+  infoScript: T("Before", "出发前"),
+  infoDate: T("You Go", "须知"),
+  infoNum: T("Info", "须知"),
+  infoIntro: T("A few things to set up before the trip.", "出发前请先设置好这几样。"),
+  wxTitle: T("Weather and Daylight", "天气与日照"),
+  subTitle: T("Subway: Set Up Express Transit", "地铁：开启快捷交通卡"),
+  subIntro: T("Tap your iPhone or Apple Watch to pay for the subway and buses, with no ticket to buy and no need to unlock it.", "用 iPhone 或 Apple Watch 轻触即可乘坐地铁和公交，不用买票，也不用解锁。"),
+  sub1: T("Add a credit or debit card to Apple Wallet.", "把信用卡或借记卡添加到 Apple Wallet。"),
+  sub2: T("Open Settings > Wallet & Apple Pay > Express Transit and choose that card.", "打开“设置” > “钱包与 Apple Pay” > “快捷交通卡”，选择这张卡。"),
+  sub3: T("At the turnstile, hold your iPhone or Apple Watch near the OMNY reader.", "进站时，把 iPhone 或 Apple Watch 靠近 OMNY 读卡器即可。"),
+  empTitle: T("Empower App", "Empower 应用"),
+  empText: T("Empower is a cheaper Uber. Download the app and use Michelle’s referral code:", "Empower 是比 Uber 更便宜的打车应用。下载后请使用晓雪的推荐码："),
+  copy: T("Copy code", "复制推荐码"),
+  copied: T("Copied!", "已复制！"),
+  copyFail: T("Tap and hold to copy", "请长按代码复制"),
+  splitLabel: T("While Evie naps, others can head out:", "爱文午睡时，其他人可以去："),
+  tagBeforeA: T("Before", "出发前"),
+  tagBeforeB: T("You Go", "须知"),
+  bfTitle: T("Quick Breakfast Options", "快捷早餐选择"),
+  bfIntro: T("Hotel breakfast is included. Here are quick grab-and-go options nearby, in case anyone wants to head out.", "酒店含早餐。如果有人想出去吃，这里有几家附近的快捷选择。"),
+  tagPlanA: T("To", "待办"),
+  tagPlanB: T("Plan", "规划"),
+  planScript: T("Still", "待办"),
+  planDate: T("To Plan", "事项"),
+  planIntro: T("Notes on what still needs to be planned. This page is temporary.", "还需要规划的事项备忘。这一页只是暂时的。"),
+  mapsTitle: T("Open directions in…", "用哪个地图查看路线？"),
+  google: T("Google Maps", "Google 地图"),
+  apple: T("Apple Maps", "Apple 地图"),
+  cancel: T("Cancel", "取消"),
+  pageTitle: T("NYC Family Trip", "纽约家庭之旅")
+};
+const LINKS = { site: T("Website", "官网"), show: T("Show info", "演出信息") };
+const CATS = {
+  travel: { label: T("Travel", "交通"), color: "var(--c-travel)" },
+  food:   { label: T("Food", "美食"), color: "var(--c-food)" },
+  sight:  { label: T("Sightseeing", "观光"), color: "var(--c-sight)" },
+  show:   { label: T("Show", "演出"), color: "var(--c-show)" },
+  rest:   { label: T("Rest", "休息"), color: "var(--c-rest)" }
+};
+const WEEKDAY_FULL = { Sat: "Saturday", Sun: "Sunday", Mon: "Monday", Tue: "Tuesday", Wed: "Wednesday", Thu: "Thursday", Fri: "Friday" };
+const NAP = { t: "1:30 PM", cat: "rest", title: T("Evie’s Nap", "爱文午睡"), note: T("Around 1:30–3:30 PM, flexible", "大约下午1:30–3:30，可灵活调整") };
+
+const DAYS = [
+  { id: "dec-5", iso: "2026-12-05", wd: "Sat", wdZh: "周六", num: 5, note: T("Travel day", "出行日"), items: [
+    { t: "11:00 AM", cat: "travel", title: T("Fly Out of SFO", "从旧金山 (SFO) 起飞") },
+    { t: "7:30 PM", cat: "travel", title: T("Land at JFK", "抵达肯尼迪机场 (JFK)") },
+    { t: "8:00 PM", cat: "travel", title: T("Uber to the Hotel and Settle In", "打车去酒店，办理入住"), name: "Residence Inn by Marriott, Midtown East", map: "Residence Inn by Marriott New York Manhattan/Midtown East, 148 E 48th St, New York, NY 10017" },
+    { t: "9:00 PM", cat: "food", title: T("Dinner at Giulietta", "Giulietta 意大利餐厅晚餐"), name: "Giulietta", map: "Giulietta 200 Park Ave New York",
+      note: T("No reservation made yet, since they charge for any changes. There seems to be plenty of availability on weekends.", "暂未订位：餐厅改期会收费，而且周末看起来空位很多。") }
+  ]},
+  { id: "dec-6", iso: "2026-12-06", wd: "Sun", wdZh: "周日", num: 6, items: [
+    { t: "10:00 AM", cat: "sight", title: T("Central Park Zoo", "中央公园动物园"), name: "Central Park Zoo", map: "Central Park Zoo",
+      links: [["site", "https://centralparkzoo.com"]] },
+    { t: "11:00 AM", cat: "sight", title: T("Central Park", "中央公园"), name: "Central Park", map: "Central Park, New York",
+      note: T("Walk from the zoo to the lake.", "从 Central Park Zoo 步行前往湖边。"),
+      links: [["site", "https://www.centralparknyc.org"]] },
+    { t: "12:00 PM", cat: "food", title: T("Central Park Boathouse", "中央公园船屋餐厅"), name: "Central Park Boathouse", map: "Loeb Boathouse Central Park",
+      desc: T("A lakeside restaurant in the park with views toward the Midtown skyline.", "公园里的湖边餐厅，可以眺望中城的天际线。") },
+    { t: "1:15 PM", cat: "travel", title: T("Back to the Hotel", "回酒店"), name: "Residence Inn by Marriott, Midtown East", map: "Residence Inn by Marriott New York Manhattan/Midtown East, 148 E 48th St, New York, NY 10017", note: T("Rest and nap time for Evie.", "让爱文休息午睡。") },
+    { ...NAP, note: T("Around 1:30–3:00 PM, flexible", "大约下午1:30–3:00，可灵活调整") },
+    { t: "3:00 PM", cat: "sight", solo: true, title: T("Times Square", "时代广场"), name: "Times Square", map: "Times Square, New York",
+      note: T("Stops to hit: M&M’s World and the Disney Store. M&M’s World has restrooms.", "推荐逛：M&M’s World 和 Disney Store。M&M’s World 里有洗手间。") },
+    { t: "5:00 PM", cat: "food", title: T("Dinner at Mountain House", "川山甲晚餐"), name: "Mountain House 川山甲", map: "Mountain House 353 W 46th St New York",
+      desc: T("A Sichuan restaurant near Times Square, known for bold, numbing-spicy flavors.", "离 Times Square 不远的川菜馆，以麻辣鲜香闻名。") },
+    { t: "6:30 PM", cat: "show", title: T("The Lion King", "《狮子王》音乐剧"), name: "The Lion King · Minskoff Theatre", map: "Minskoff Theatre, 200 W 45th St, New York",
+      note: T("Minskoff Theatre, 200 W 45th St. Runs about 2½ hours.", "Minskoff Theatre，西45街200号。演出约2.5小时。"),
+      links: [["show", "https://broadwaydirect.com/show/the-lion-king/"]] }
+  ]},
+  { id: "dec-7", iso: "2026-12-07", wd: "Mon", wdZh: "周一", num: 7, note: T("Angelina’s working day", "Angelina 今天要上班"), items: [
+    { t: "9:00 AM", cat: "sight", title: T("St. Patrick’s Cathedral", "圣帕特里克大教堂"), name: "St. Patrick’s Cathedral", map: "St. Patrick's Cathedral, 5th Ave, New York, NY 10022",
+      note: T("Free to enter. Open from 6:30 AM, and it’s quietest right after the 8:00 AM Mass.", "免费参观。早上6:30开门，早上8:00弥撒结束后最安静。") },
+    { t: "9:45 AM", cat: "sight", title: T("Cartier’s Holiday Bow", "卡地亚圣诞红丝带"), name: "Cartier Mansion", map: "Cartier 653 Fifth Avenue, New York, NY 10022",
+      note: T("A quick photo stop at Fifth Ave and 52nd St. St. Thomas Church is a block north if you want a peek inside.", "第五大道与52街路口的拍照点。往北一个街区就是 St. Thomas Church（圣托马斯教堂），可以进去看看。") },
+    { t: "10:15 AM", cat: "travel", title: T("Head to the World Trade Center", "前往 World Trade Center（世贸中心）"), map: "9/11 Memorial, New York",
+      note: T("About 30 minutes by subway. The E train from Fifth Ave–53rd St goes straight there.", "乘地铁约30分钟。从 Fifth Ave–53rd St 站乘 E 线可直达。") },
+    { t: "10:45 AM", cat: "sight", title: T("World Trade Center and 9/11 Memorial", "世贸中心与 9/11 纪念园"), name: "World Trade Center & 9/11 Memorial", map: "9/11 Memorial, New York",
+      links: [["site", "https://www.911memorial.org"]] },
+    { t: "11:30 AM", cat: "sight", title: T("New York Stock Exchange and the Charging Bull", "纽约证券交易所与华尔街铜牛"), name: "New York Stock Exchange & Charging Bull", map: "Charging Bull, New York" },
+    { t: "12:00 PM", cat: "food", title: T("Lunch at Toro Loco", "Toro Loco 墨西哥餐厅午餐"), name: "Toro Loco", map: "Toro Loco 15 Stone St New York, NY 10004",
+      note: T("Tentative for now.", "暂定。"),
+      desc: T("A lively Mexican restaurant on Stone Street, known for tacos, guacamole and margaritas.", "石街上气氛热闹的墨西哥餐厅，以墨西哥玉米饼、牛油果酱和玛格丽特闻名。") },
+    NAP,
+    { t: "1:30 PM", cat: "sight", title: T("Statue of Liberty", "自由女神像"), name: "Statue of Liberty", map: "Castle Clinton National Monument, Battery Park, New York, NY 10004",
+      note: T("Pedestal Reserve for 5. Security check-in 1:30 PM, ferry departs 2:00 PM, last entrance to the statue 3:30 PM. Expect to be back at Battery Park around 5:00 PM. Arrive by 1:00 PM. Confirmation no. i88453813 / 88453812.", "底座预约票，共5张。安检签到下午1:30，下午2:00开船，最晚入场下午3:30。预计下午5:00左右回到 Battery Park（炮台公园）。请在下午1:00前到达。确认号：i88453813 / 88453812。"),
+      links: [["site", "https://www.nps.gov/stli/"]] },
+    { t: "5:15 PM", cat: "sight", title: T("Seaport View at Pier 17", "Pier 17 海港夜景"), name: "Pier 17, South Street Seaport", map: "Pier 17, 89 South St, New York, NY 10038",
+      note: T("About a 10-minute Uber from Battery Park. See the Brooklyn Bridge lit up from the piers, and warm up inside Pier 17, where the lower levels have windows facing the bridge. No dinner needed. Leave by 6:05 PM.", "从 Battery Park 打车约10分钟。可以在码头边欣赏亮灯的 Brooklyn Bridge，再进 Pier 17 室内取暖，下层有朝向大桥的窗户。不需要吃晚餐。请在下午6:05前离开。") },
+    { t: "6:30 PM", cat: "food", title: T("Dinner at Fish Cheeks", "Fish Cheeks 泰式海鲜餐厅晚餐"), name: "Fish Cheeks", map: "Fish Cheeks 55 Bond St, New York, NY 10012",
+      note: T("Tentative. A reservation has been requested but is not confirmed yet.", "暂定。已申请订位，但还没有确认。"),
+      desc: T("A Thai seafood restaurant known for bold, punchy flavors.", "以浓烈口味著称的泰式海鲜餐厅。") },
+    { t: "7:30 PM", cat: "food", title: T("Dessert at Levain Bakery", "Levain 面包店甜点"), name: "Levain Bakery", map: "Levain Bakery 340 Lafayette St, New York, NY 10012",
+      note: T("About a 3-minute walk from Fish Cheeks.", "从 Fish Cheeks 步行约3分钟。"),
+      desc: T("Famous for giant, gooey cookies; chocolate chip walnut is the classic.", "以超大个的软心曲奇闻名，经典口味是巧克力核桃。") }
+  ]},
+  { id: "dec-8", iso: "2026-12-08", wd: "Tue", wdZh: "周二", num: 8, items: [
+    { t: "9:00 AM", cat: "sight", title: T("Breakfast at Michelle’s Apartment", "晓雪公寓早餐"), map: "261 West 24th Street, New York, NY 10011",
+      note: T("Bagels provided", "提供贝果") },
+    { t: "10:00 AM", cat: "sight", title: T("Little Island", "小岛公园"), name: "Little Island", map: "Little Island NYC",
+      note: T("Keep it to about 30–40 minutes, since it will be cold.", "天气冷，建议只逛 30–40 分钟。"),
+      links: [["site", "https://littleisland.org"]] },
+    { t: "10:45 AM", cat: "sight", title: T("High Line Walk to Hudson Yards", "沿高线公园走到哈德逊广场"), name: "The High Line", map: "The High Line, W 20th St entrance, New York, NY 10011",
+      note: T("Take a short Uber from Little Island to the 20th St entrance, then walk north to Hudson Yards, about 25 minutes. There are stair and elevator exits along the way if anyone gets cold.", "从 Little Island 打车一小段到 20th St 入口，然后向北走到 Hudson Yards，约 25 分钟。沿途有楼梯和电梯出口，如果有人觉得冷可以随时下去。"),
+      links: [["site", "https://www.thehighline.org"]] },
+    { t: "11:15 AM", cat: "sight", title: T("Vessel and Hudson Yards", "Vessel 与哈德逊广场"), name: "Vessel & Hudson Yards", map: "Hudson Yards, New York, NY 10001",
+      note: T("See the Vessel from the plaza, then warm up in the indoor shops. Restrooms and cafes are inside.", "在广场上看一看 Vessel（蜂巢形建筑），再进商场取暖。里面有洗手间和咖啡店。") },
+    { t: "12:15 PM", cat: "food", title: T("Lunch at Ci Siamo", "Ci Siamo 意大利餐厅午餐"), name: "Ci Siamo", map: "Ci Siamo 440 W 33rd St, New York, NY 10001",
+      note: T("Reservation made for 12:15 PM. About a 5-minute walk from Hudson Yards. Leave by 1:15 PM to get Evie back for her nap.", "已订好12:15的位子。从 Hudson Yards 步行约 5 分钟。请在下午 1:15 前离开，好让爱文回去午睡。"),
+      desc: T("A modern Italian restaurant near Hudson Yards, known for wood-fire cooking.", "Hudson Yards 附近的现代意大利餐厅，以木火烹饪闻名。") },
+    { t: "1:15 PM", cat: "travel", title: T("Back to the Hotel", "回酒店"), name: "Residence Inn by Marriott, Midtown East", map: "Residence Inn by Marriott New York Manhattan/Midtown East, 148 E 48th St, New York, NY 10017",
+      note: T("Rest and nap time for Evie.", "让爱文休息午睡。") },
+    NAP,
+    { t: "1:30 PM", cat: "sight", title: T("The Plaza Hotel", "广场酒店"), name: "The Plaza Hotel", map: "The Plaza Hotel New York" },
+    { t: "2:00 PM", cat: "show", title: T("Radio City Christmas Spectacular", "无线电城圣诞盛会"), name: "Radio City Christmas Spectacular", map: "Radio City Music Hall",
+      note: T("The Rockettes, at Radio City Music Hall.", "火箭女郎表演，在无线电城音乐厅。"),
+      links: [["show", "https://www.rockettes.com"]] },
+    { t: "3:30 PM", cat: "sight", title: T("FAO Schwarz and the LEGO Store", "FAO Schwarz 与乐高商店"), name: "FAO Schwarz & LEGO Store", map: "FAO Schwarz, 30 Rockefeller Plaza, New York, NY 10112",
+      note: T("Warm, indoor stops right by Radio City.", "就在 Radio City 旁边，在室内取暖逛逛。") },
+    { t: "4:45 PM", cat: "sight", title: T("Rockefeller Center Tree", "洛克菲勒中心圣诞树"), name: "Rockefeller Center Christmas Tree", map: "Rockefeller Center Christmas Tree",
+      note: T("The tree and the rink at dusk.", "黄昏时分的圣诞树和溜冰场。"),
+      links: [["site", "https://www.rockefellercenter.com"]] },
+    { t: "5:15 PM", cat: "sight", title: T("Saks Light Show", "Saks 灯光秀"), name: "Saks Fifth Avenue", map: "Saks Fifth Avenue, 611 5th Ave, New York, NY 10022",
+      note: T("The show runs after dark, just across the street from Rockefeller Center.", "灯光秀在天黑后上演，就在 Rockefeller Center 对面。") },
+    { t: "5:45 PM", cat: "sight", title: T("Fifth Avenue Holiday Windows", "第五大道节日橱窗"), name: "Fifth Avenue", map: "Fifth Avenue, New York",
+      note: T("Stroll south toward Bryant Park, past the shop windows and the Library’s stone lions at 42nd St.", "沿着第五大道向南走到 Bryant Park，沿途欣赏橱窗，42nd St 有图书馆门口的石狮子。") },
+    { t: "6:15 PM", cat: "sight", title: T("Bryant Park Winter Village", "布莱恩特公园冬季集市"), name: "Bryant Park Winter Village", map: "Bryant Park Winter Village",
+      note: T("There are a lot of vendors here, so you could eat dinner at the market. The Lodge, a heated food hall by the rink, is the warmest place to sit down. Backup option: dinner at Rosemary’s, which is very close to the hotel.", "这里有很多小吃摊位，可以直接在集市吃晚餐。The Lodge 是溜冰场旁边有暖气的美食厅，是最暖和的落座地方。备选：去离酒店很近的 Rosemary’s 吃晚餐。"),
+      links: [["site", "https://bryantpark.org"]] }
+  ]},
+  { id: "dec-9", iso: "2026-12-09", wd: "Wed", wdZh: "周三", num: 9, note: T("Michelle works in the morning", "晓雪上午要工作"), items: [
+    { t: "10:00 AM", cat: "sight", title: T("Museum of the City of New York", "纽约市博物馆"), name: "Museum of the City of New York", map: "Museum of the City of New York",
+      note: T("Gingerbread exhibit", "姜饼展"),
+      links: [["site", "https://www.mcny.org"]] },
+    { t: "11:00 AM", cat: "sight", title: T("The Met", "大都会艺术博物馆"), name: "The Metropolitan Museum of Art", map: "The Metropolitan Museum of Art",
+      links: [["site", "https://www.metmuseum.org"]] },
+    { t: "12:30 PM", cat: "food", title: T("Lunch at La Grande Boucherie", "La Grande Boucherie 法式餐厅午餐"), name: "La Grande Boucherie", map: "La Grande Boucherie 145 W 53rd St, New York, NY 10019",
+      note: T("Reservation made. About a 15 to 20 minute Uber from The Met. Leave by 1:10 PM to get Evie back for her nap.", "已订位。从 The Met 打车约 15 到 20 分钟。请在下午 1:10 前离开，好让爱文回去午睡。"),
+      desc: T("A large, lively French brasserie in Midtown with a Parisian atmosphere.", "中城的大型法式小酒馆，气氛热闹，带有巴黎风情。") },
+    { t: "1:10 PM", cat: "travel", title: T("Back to the Hotel", "回酒店"), name: "Residence Inn by Marriott, Midtown East", map: "Residence Inn by Marriott New York Manhattan/Midtown East, 148 E 48th St, New York, NY 10017",
+      note: T("Rest and nap time for Evie.", "让爱文休息午睡。") },
+    NAP,
+    { t: "4:00 PM", cat: "sight", title: T("Dyker Heights Christmas Lights", "戴克高地圣诞灯饰"), name: "Dyker Heights Christmas Lights", map: "Dyker Heights Christmas Lights, Brooklyn",
+      note: T("Leave the hotel around 4:00 PM. It’s about an hour away, so you’ll arrive after dark. In Brooklyn. Dinner nearby afterward, place to be decided.", "下午4:00左右从酒店出发，路程约一小时，到达时天已经黑了。位于布鲁克林。之后在附近吃晚餐，餐厅待定。") }
+  ]},
+  { id: "dec-10", iso: "2026-12-10", wd: "Thu", wdZh: "周四", num: 10, items: [
+    { t: "10:00 AM", cat: "sight", title: T("New York Public Library", "纽约公共图书馆"), name: "New York Public Library", map: "New York Public Library Stephen A. Schwarzman Building, 476 5th Ave, New York, NY 10018",
+      note: T("Free to enter. Visitors can see the Rose Main Reading Room from 10 to 11 AM. The Children’s Center is a fun stop for Evie.", "免费入场。10–11 点可以参观玫瑰主阅览室。儿童中心很适合带爱文去玩。"),
+      links: [["site", "https://www.nypl.org"]] },
+    { t: "11:30 AM", cat: "sight", title: T("SUMMIT One Vanderbilt", "SUMMIT 范德比尔特一号观景台"), name: "SUMMIT One Vanderbilt", map: "SUMMIT One Vanderbilt",
+      note: T("Observation deck", "观景台"),
+      links: [["site", "https://summitov.com"]] },
+    { t: "12:00 PM", cat: "sight", title: T("Grand Central Holiday Market", "中央车站节日集市"), name: "Grand Central Terminal", map: "Grand Central Terminal",
+      links: [["site", "https://www.grandcentralterminal.com"]] },
+    { t: "12:30 PM", cat: "food", title: T("Vanderbilt Market", "范德比尔特美食广场"), name: "Vanderbilt Market", map: "Vanderbilt Market New York",
+      desc: T("A food hall near Grand Central with many vendors, so everyone can pick what they like.", "Grand Central 附近的美食广场，有很多不同的摊位，每个人都能挑到爱吃的。") },
+    { ...NAP, note: T("Around 1:30–2:30 PM, flexible", "大约下午1:30–2:30，可灵活调整") },
+    { t: "3:00 PM", cat: "sight", solo: true, title: T("Santaland at Macy’s", "Macy’s Santaland 圣诞老人村"), name: "Macy’s Santaland", map: "Macy's Herald Square, 151 W 34th St, New York, NY 10001",
+      note: T("Free, but a reservation is required for every guest. Reservations open about a week ahead (around Dec 3).", "免费，但每位客人都需要预约。预约大约提前一周开放（约12月3日）。") },
+    { t: "5:15 PM", cat: "food", title: T("Dinner at Her Name Is Han", "Her Name Is Han 韩餐厅晚餐"), name: "Her Name Is Han", map: "Her Name Is Han 17 E 31st St, New York, NY 10016",
+      note: T("Reservation made for 5:15 PM.", "已订好下午5:15的位子。"),
+      desc: T("A Korean restaurant known for comfort food like bossam (boiled pork wraps), kimchi pancake and sweet corn bingsu.", "以韩式家常菜闻名的韩餐厅，招牌有菜包肉、泡菜饼和甜玉米刨冰。") }
+  ]},
+  { id: "dec-11", iso: "2026-12-11", wd: "Fri", wdZh: "周五", num: 11, note: T("Travel day", "出行日"), items: [
+    { t: "8:00 AM", cat: "travel", title: T("Uber to the Airport", "打车去机场") },
+    { t: "10:00 AM", cat: "travel", title: T("Fly Out of JFK", "从肯尼迪机场 (JFK) 起飞") },
+    { t: "2:00 PM", cat: "travel", title: T("Land at SFO", "抵达旧金山 (SFO)"), note: T("Pacific time", "太平洋时间") }
+  ]}
+];
+
+const IDEAS = [
+  { title: UI.seeTitle, items: [
+    { name: "Harry Potter Shop New York", zh: "哈利·波特商店", map: "Harry Potter Shop New York 935 Broadway, New York, NY 10010",
+      note: T("In the Flatiron area. Thursday is full now, so it could fit another day.", "位于 Flatiron 一带。周四已经排满，可以另找一天去。") },
+    { name: "Time Out Market Rooftop", zh: "Time Out Market 屋顶", map: "Time Out Market New York, 55 Water St, Brooklyn, NY 11201",
+      note: T("In DUMBO, with rooftop views of the Brooklyn Bridge, the Manhattan Bridge and the skyline. Open until 10 PM on weekdays. Check the rooftop’s age policy and winter hours first.", "位于 DUMBO，屋顶可以看到 Brooklyn Bridge、Manhattan Bridge 和天际线。工作日营业到晚上10点。去之前请先确认屋顶的年龄限制和冬季开放时间。") },
+    { name: "Flatiron Building", zh: "熨斗大厦", map: "Flatiron Building, New York" },
+    { name: "American Museum of Natural History", zh: "美国自然历史博物馆", map: "American Museum of Natural History", link: ["site", "https://www.amnh.org"] },
+    { name: "CAMP", zh: "CAMP 儿童游乐空间", map: "CAMP 110 5th Ave New York", link: ["site", "https://camp.com/locations/fifth-ave-nyc"],
+      note: T("A play area for kids, in case the little one wants some fun.", "儿童游乐空间，适合带小朋友去玩。") }
+  ]},
+  { title: UI.eatTitle, items: [
+    { name: "Carmine’s (44th St)", zh: "Carmine’s 意大利餐厅（西44街）", map: "Carmine's 44th Street New York",
+      note: T("Michelle has a 12 PM reservation, Monday through Thursday. Day to be decided.", "晓雪订了中午12点的位子，周一至周四均可，日期待定。"),
+      desc: T("Big family-style Italian platters made for sharing.", "菜量很大的意大利餐厅，适合一大家子分着吃。") },
+    { name: "Rolf’s", zh: "Rolf’s 德国餐厅", map: "Rolf's Bar & Restaurant New York",
+      note: T("For drinks after lunch or dinner.", "适合午饭或晚饭后去喝一杯。"),
+      desc: T("A German restaurant famous for its over-the-top Christmas decorations.", "以满屋圣诞装饰闻名的德国餐厅。") },
+    { name: "Pete’s Tavern", zh: "Pete’s Tavern 酒馆", map: "Pete's Tavern New York",
+      desc: T("A historic tavern with festive holiday decorations, serving Italian-American comfort food.", "历史悠久、圣诞气氛浓厚的老酒馆，供应意式美式家常菜。") },
+    { name: "Rosemary’s", zh: "Rosemary’s 意大利餐厅", map: "Rosemary's Midtown 825 3rd Ave, New York, NY 10022",
+      desc: T("A casual Italian restaurant with pizza and pasta, just a few blocks from the hotel.", "休闲的意大利餐厅，有披萨和意面，离酒店只有几个街区。") },
+    { name: "Ginger Restorante", zh: "Ginger 意大利餐厅", map: "Ginger Ristorante 123 W 49th St New York",
+      note: T("Christmas decorations", "有圣诞装饰"),
+      desc: T("A Rome-based Italian restaurant near Rockefeller Center, praised for its homemade pasta.", "来自罗马的意大利餐厅，离 Rockefeller Center 很近，手工意面很受好评。") },
+    { name: "Magnolia Bakery", zh: "Magnolia 面包店", map: "Magnolia Bakery New York",
+      desc: T("Beloved for its banana pudding and pastel-frosted cupcakes.", "以香蕉布丁和彩色奶油杯子蛋糕闻名。") },
+    { name: "Soothr", zh: "Soothr 泰式面馆", map: "Soothr 204 E 13th St New York",
+      desc: T("A Thai noodle spot in the East Village, recognized by the Michelin Guide.", "东村的泰式面馆，入选米其林指南。") },
+    { name: "Ellen’s Stardust Diner", zh: "Ellen’s Stardust Diner 歌唱餐厅", map: "Ellen's Stardust Diner",
+      desc: T("A 1950s-style diner where the waitstaff sing Broadway tunes while they serve.", "50年代风格的餐厅，服务员边上菜边唱百老汇歌曲。") },
+    { name: "Adells", zh: "Adells", map: "Adells New York" },
+  ]}
+];
+
+const TIPS = {
+  get: { color: "var(--c-travel)", title: T("Getting Around: Subway or Uber", "出行：地铁还是 Uber"), items: [
+    T("With Evie and a stroller, Uber is usually the easier choice. Many subway stations have stairs, and the elevators can be far from the entrance, hard to find, or out of service.", "带着爱文和婴儿车，通常打 Uber 更方便。很多地铁站要走楼梯，电梯可能离入口很远、不好找，有时还会停用。"),
+    T("The subway costs $3 per adult per ride, and Evie rides free. For six adults that is $18 per trip, so a shared Uber is sometimes cheaper, especially for short rides.", "地铁每位成人每次$3，爱文可以免费乘坐。6位成人每趟共$18，所以短途时几个人合打一辆 Uber 有时反而更便宜。")
+  ]},
+};
+
+const BREAKFAST = [
+  { cat: "food", title: T("Ole & Steen", "Ole & Steen 丹麦面包店"), name: "Ole & Steen", map: "Ole & Steen 518 Lexington Ave, New York, NY 10017",
+    note: T("About 2 minutes’ walk. Opens 6:30 AM (7:00 AM on weekends).", "步行约2分钟。早上6:30开门（周末7:00）。"),
+    desc: T("A Danish bakery with pastries, breads and sandwiches, almost next door to the hotel.", "丹麦风格面包店，有各式糕点、面包和三明治，就在酒店旁边。") },
+  { cat: "food", title: T("Angelina Bakery Grand Central", "Angelina 面包店（中央车站店）"), name: "Angelina Bakery Grand Central", map: "Angelina Bakery 450 Lexington Ave, New York, NY 10017",
+    note: T("About 7 minutes’ walk. Opens 7:00 AM (8:00 AM on weekends).", "步行约7分钟。早上7:00开门（周末8:00）。"),
+    desc: T("Known for filled croissants, donuts and Italian pastries.", "以馅料丰富的可颂、甜甜圈和意式糕点闻名。") },
+  { cat: "food", title: T("Gulp", "呷奔 台式早餐"), name: "Gulp (呷奔)", map: "Gulp 56 E 41st St, New York, NY 10017",
+    note: T("About 12 minutes’ walk. Reviewers say the fan tuan breakfast is served about 8–10 AM and the line can get long, so ordering ahead helps.", "步行约12分钟。据食客说，饭团早餐供应时间约为早上8–10点，排队可能较长，建议提前线上订餐。"),
+    desc: T("A Taiwanese spot known for fan tuan (sticky-rice rolls), tea eggs and green onion pancakes.", "台式早餐店，推荐饭团、茶叶蛋、葱花饼。") }
+];
+
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+function nyNow() {
+  const parts = {};
+  new Intl.DateTimeFormat("en-CA", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hourCycle: "h23" })
+    .formatToParts(new Date()).forEach(p => parts[p.type] = p.value);
+  return { iso: `${parts.year}-${parts.month}-${parts.day}`, mins: (+parts.hour) * 60 + (+parts.minute) };
+}
+function toMins(t) {
+  const m = t.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!m) return 0;
+  let h = +m[1] % 12; if (m[3].toUpperCase() === "PM") h += 12;
+  return h * 60 + (+m[2]);
+}
+function timeHtml(t) {
+  if (lang === "en") return esc(t);
+  const m = t.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!m) return esc(t);
+  let h = +m[1] % 12; if (m[3].toUpperCase() === "PM") h += 12;
+  const per = h < 12 ? "上午" : h === 12 ? "中午" : h < 18 ? "下午" : "晚上";
+  return `<span class="period">${per}</span>${+m[1]}:${m[2]}`;
+}
+function timeInline(t) {
+  if (lang === "en") return esc(t);
+  const m = t.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if (!m) return esc(t);
+  let h = +m[1] % 12; if (m[3].toUpperCase() === "PM") h += 12;
+  const per = h < 12 ? "上午" : h === 12 ? "中午" : h < 18 ? "下午" : "晚上";
+  return `${per}${+m[1]}:${m[2]}`;
+}
+function dayLabels(d) {
+  return lang === "zh"
+    ? { wd: d.wdZh, script: d.wdZh, date: `12月${d.num}日` }
+    : { wd: d.wd, script: WEEKDAY_FULL[d.wd], date: `December ${d.num}` };
+}
+
+const now = nyNow();
+const todayId = (DAYS.find(d => d.iso === now.iso) || {}).id;
+
+function tagTile(id, aKey, bKey, current, cls) {
+  const label = tr(UI[aKey]) + " " + tr(UI[bKey]);
+  return `
+    <a class="tagtile${cls ? " " + cls : ""}" href="#${id}" ${current === id ? 'aria-current="page"' : ""} aria-label="${esc(label)}">
+      <span class="tag-inner"><span class="t1">${esc(tr(UI[aKey]))}</span><span class="t2">${esc(tr(UI[bKey]))}</span></span>${cls === "luggage" ? '<span class="wheel w1"></span><span class="wheel w2"></span>' : ""}
+    </a>`;
+}
+
+const PLAN = [
+  { color: "var(--c-food)", mark: "todo", title: T("Dinners Still to Plan", "还没定的晚餐"), items: [
+    T("Wed Dec 9: Dinner is still to be decided, somewhere near Dyker Heights in Brooklyn.", "12月9日（周三）：晚餐还没定，要在布鲁克林 Dyker Heights 附近找一家。"),
+  ]},
+  { color: "var(--c-show)", mark: "todo", title: T("Not Confirmed Yet", "尚未确认"), items: [
+    T("Sat Dec 5: Giulietta at 9:00 PM has no reservation yet. They charge for changes, but weekends seem to have plenty of availability.", "12月5日（周六）：晚上9:00的 Giulietta 还没订位。他们改期会收费，不过周末看起来空位很多。"),
+    T("Sun Dec 6: Central Park Boathouse lunch at 12:00 PM. Reservations open Nov 15 at 12:00 AM ET (a reminder is in the calendar file).", "12月6日（周日）：中午12:00的 Central Park Boathouse 午餐。11月15日东部时间凌晨12:00开放订位（提醒已在日历文件里）。"),
+    T("Sun Dec 6: Buy tickets for The Lion King at 6:30 PM.", "12月6日（周日）：购买下午6:30 The Lion King 的票。"),
+    T("Mon Dec 7: Dinner at Fish Cheeks at 6:30 PM is tentative. A reservation has been requested but not confirmed yet.", "12月7日（周一）：下午6:30的 Fish Cheeks 晚餐是暂定的。已申请订位，但还没有确认。"),
+    T("Mon Dec 7: Lunch at Toro Loco is tentative. Confirm it or choose another place.", "12月7日（周一）：Toro Loco 的午餐是暂定的，请确认或另选一家。"),
+    T("Tue Dec 8: Buy tickets for the Rockettes show at 2:00 PM.", "12月8日（周二）：购买下午2:00 Rockettes 演出的票。"),
+    T("Thu Dec 10: Reserve Macy’s Santaland for around 3:00 PM. Reservations are free and open about a week ahead (around Dec 3).", "12月10日（周四）：预约下午3:00左右的 Macy’s Santaland。预约免费，大约提前一周开放（约12月3日）。"),
+    T("Thu Dec 10: Buy tickets for SUMMIT One Vanderbilt at 11:30 AM.", "12月10日（周四）：购买上午11:30 SUMMIT One Vanderbilt 的门票。")
+  ]},
+  { color: "var(--c-sight)", mark: "todo", title: T("Decisions and Questions", "待定事项"), items: [
+    T("Who stays with Evie while others go to the Statue of Liberty (Mon) and the Rockettes (Tue)?", "周一去 Statue of Liberty、周二看 Rockettes 演出时，谁留下来陪爱文？"),
+    T("The Statue of Liberty tickets are for 5, but 6 adults are traveling. Confirm who is going.", "Statue of Liberty 的票是5张，但一共有6位成人。请确认谁去。"),
+    T("The Natural History Museum is parked in More Ideas. Pick a day for it, since it’s the main stop for Evie.", "American Museum of Natural History 暂时放在“更多推荐”里。它是爱文最想去的地方，请选一天安排。"),
+    T("Adells in More Ideas still needs to be identified.", "“更多推荐”里的 Adells 还需要确认是哪家餐厅。")
+  ]},
+  { color: "var(--c-travel)", mark: "done", title: T("Already Confirmed", "已确认"), items: [
+    T("Sun Dec 6: Dinner at Mountain House at 5:00 PM is booked.", "12月6日（周日）：下午5:00的 Mountain House 晚餐已订好。"),
+    T("Mon Dec 7: Statue of Liberty Pedestal Reserve for 5. Ferry departs at 2:00 PM.", "12月7日（周一）：Statue of Liberty 底座预约票5张，下午2:00开船。"),
+    T("Tue Dec 8: Lunch reservation at Ci Siamo for 12:15 PM.", "12月8日（周二）：已订好中午12:15的 Ci Siamo 午餐。"),
+    T("Wed Dec 9: Reservation made at La Grande Boucherie for 12:30 PM.", "12月9日（周三）：已订好中午12:30的 La Grande Boucherie。"),
+    T("Thu Dec 10: Reservation made at Her Name Is Han for 5:15 PM.", "12月10日（周四）：已订好下午5:15的 Her Name Is Han。")
+  ]}
+];
+
+function planCard(t) {
+  return `
+      <div class="card" style="--cat:${t.color}">
+        <h3>${esc(tr(t.title))}</h3>
+        <ul class="tips ${t.mark}">${t.items.map(i => `<li>${esc(tr(i))}</li>`).join("")}</ul>
+      </div>`;
+}
+
+function renderPlan() {
+  return `
+    <div class="day-head">
+      <h2><span class="script">${esc(tr(UI.planScript))}</span><span class="date">${esc(tr(UI.planDate))}</span></h2>
+      <p class="intro">${esc(tr(UI.planIntro))}</p>
+    </div>
+    <div class="info-list">${PLAN.map(planCard).join("")}</div>`;
+}
+
+function noteTile(current) {
+  const label = tr(UI.tagPlanA) + " " + tr(UI.tagPlanB);
+  return `
+    <a class="notetile" href="#plan" ${current === "plan" ? 'aria-current="page"' : ""} aria-label="${esc(label)}">
+      <span class="tag-inner"><span class="t1">${esc(tr(UI.tagPlanA))}</span><span class="t2">${esc(tr(UI.tagPlanB))}</span></span>
+    </a>`;
+}
+
+function renderTiles(current) {
+  const html = tagTile("info", "tagBeforeA", "tagBeforeB", current, "luggage") + DAYS.map(d => {
+    const today = d.id === todayId, L = dayLabels(d);
+    return `
+    <a class="stamp${today ? " is-today" : ""}" href="#${d.id}" ${d.id === current ? 'aria-current="page"' : ""} aria-label="${esc(L.script + ", " + L.date)}${today ? ", " + esc(tr(UI.today)) : ""}">
+      <span class="stamp-inner"><span class="wd">${today ? esc(tr(UI.today)) : esc(L.wd)}</span><span class="num">${d.num}</span></span>
+    </a>`;
+  }).join("") + `
+    <a class="stamp ideas" href="#ideas" ${current === "ideas" ? 'aria-current="page"' : ""} aria-label="${esc(tr(UI.more) + " " + tr(UI.ideas))}">
+      <span class="stamp-inner"><span class="wd">${esc(tr(UI.more))}</span><span class="num">${esc(tr(UI.ideas))}</span></span>
+    </a>` + noteTile(current);
+  document.getElementById("tiles").innerHTML = html;
+  const active = document.querySelector('.stamp[aria-current="page"], .tagtile[aria-current="page"], .notetile[aria-current="page"]');
+  if (active) active.scrollIntoView({ block: "nearest", inline: "center" });
+}
+
+function linksHtml(item, name) {
+  const links = [];
+  if (item.map) links.push(`<button type="button" class="dir-btn" data-q="${esc(item.map)}" data-name="${esc(name)}">${esc(tr(UI.dir))}</button>`);
+  (item.links || []).forEach(([key, url]) => links.push(`<a href="${url}" target="_blank" rel="noopener">${esc(tr(LINKS[key]))}</a>`));
+  return links.length ? `<div class="links">${links.join("")}</div>` : "";
+}
+
+function cardHtml(it, isNext) {
+  const cat = CATS[it.cat];
+  const swap = lang === "zh" && it.name && it.cat !== "travel" && it.cat !== "rest";
+  const heading = swap ? it.name : tr(it.title);
+  const subText = lang === "zh" && it.name ? (swap ? tr(it.title) : it.name) : "";
+  const enName = subText ? `<p class="en-name">${esc(subText)}</p>` : "";
+  return `
+        <div class="card" style="--cat:${cat.color}">
+          ${it.cat === "rest" ? "" : `<div class="cat">${esc(tr(cat.label))}</div>`}
+          <h3>${esc(heading)}${isNext ? `<span class="next-up">${esc(tr(UI.next))}</span>` : ""}</h3>
+          ${enName}
+          ${it.note ? `<p class="note">${esc(tr(it.note))}</p>` : ""}
+          ${it.desc ? `<p class="desc">${esc(tr(it.desc))}</p>` : ""}
+          ${linksHtml(it, heading)}
+        </div>`;
+}
+
+function renderDay(day) {
+  const L = dayLabels(day);
+  const NAP_START = 13 * 60 + 30, NAP_END = 15 * 60 + 30;
+  const hasNap = day.items.some(i => i.cat === "rest");
+  const nested = hasNap ? day.items.filter(i => i.cat !== "rest" && !i.solo && toMins(i.t) >= NAP_START && toMins(i.t) < NAP_END) : [];
+  const nextItem = day.id === todayId ? day.items.find(i => toMins(i.t) >= now.mins - 15) : null;
+  const items = day.items.filter(i => !nested.includes(i)).map(it => {
+    if (it.cat === "rest" && nested.length) {
+      return `
+      <li class="item rest">
+        <div class="time">${timeHtml(it.t)}</div>
+        <div>
+          ${cardHtml(it, it === nextItem)}
+          <div class="split">
+            <p class="split-label">${esc(tr(UI.splitLabel))}</p>
+            <ol class="split-list">${nested.map(n => `
+              <li><div class="split-time">${timeInline(n.t)}</div>${cardHtml(n, n === nextItem)}</li>`).join("")}
+            </ol>
+          </div>
+        </div>
+      </li>`;
+    }
+    return `
+      <li class="item ${it.cat === "rest" ? "rest" : ""}">
+        <div class="time">${timeHtml(it.t)}</div>${cardHtml(it, it === nextItem)}
+      </li>`;
+  }).join("");
+  return `
+    <div class="day-head">
+      <h2><span class="script">${esc(L.script)}</span><span class="date">${esc(L.date)}</span></h2>
+      ${day.note ? `<span class="tag">${esc(tr(day.note))}</span>` : ""}
+    </div>
+    <ol class="timeline">${items}</ol>`;
+}
+
+function renderIdeas() {
+  return `
+    <div class="day-head">
+      <h2><span class="script">${esc(tr(UI.more))}</span><span class="date">${esc(tr(UI.ideas))}</span></h2>
+      <p class="intro">${esc(tr(UI.ideasIntro))}</p>
+    </div>
+    ${IDEAS.map(g => `
+      <section class="group">
+        <h3 class="group-title">${esc(tr(g.title))}</h3>
+        <ul class="idea-list">
+          ${g.items.map(i => `
+            <li class="idea">
+              <h4>${esc(i.name)}</h4>
+              ${lang === "zh" && i.zh !== i.name ? `<p class="en-name">${esc(i.zh)}</p>` : ""}
+              ${i.note ? `<p class="note">${esc(tr(i.note))}</p>` : ""}
+              ${i.desc ? `<p class="desc">${esc(tr(i.desc))}</p>` : ""}
+              <div class="links">
+                <button type="button" class="dir-btn" data-q="${esc(i.map)}" data-name="${esc(i.name)}">${esc(tr(UI.dir))}</button>
+                ${i.link ? `<a href="${i.link[1]}" target="_blank" rel="noopener">${esc(tr(LINKS[i.link[0]]))}</a>` : ""}
+              </div>
+            </li>`).join("")}
+        </ul>
+      </section>`).join("")}`;
+}
+
+function tipsCard(t) {
+  return `
+      <div class="card" style="--cat:${t.color}">
+        <h3>${esc(tr(t.title))}</h3>
+        <ul class="tips">${t.items.map(i => `<li>${esc(tr(i))}</li>`).join("")}</ul>
+      </div>`;
+}
+
+function bfCard() {
+  return `
+      <div class="card" style="--cat:var(--c-food)">
+        <h3>${esc(tr(UI.bfTitle))}</h3>
+        <p class="desc">${esc(tr(UI.bfIntro))}</p>
+        <ul class="bf-list">${BREAKFAST.map(b => `
+          <li class="bf">
+            <h4>${esc(lang === "zh" && b.name ? b.name : tr(b.title))}</h4>
+            ${lang === "zh" && b.name ? `<p class="en-name">${esc(tr(b.title))}</p>` : ""}
+            ${b.note ? `<p class="note">${esc(tr(b.note))}</p>` : ""}
+            ${b.desc ? `<p class="desc">${esc(tr(b.desc))}</p>` : ""}
+            ${linksHtml(b, lang === "zh" && b.name ? b.name : tr(b.title))}
+          </li>`).join("")}
+        </ul>
+      </div>`;
+}
+
+function renderInfo() {
+  return `
+    <div class="day-head">
+      <h2><span class="script">${esc(tr(UI.infoScript))}</span><span class="date">${esc(tr(UI.infoDate))}</span></h2>
+      <p class="intro">${esc(tr(UI.infoIntro))}</p>
+    </div>
+    <div class="info-list">
+      <div class="card" style="--cat:var(--c-sight)">
+        <h3>${esc(tr(UI.wxTitle))}</h3>
+        <ul class="plain"><li>${tr(UI.temp)}</li><li>${tr(UI.rise)}</li><li>${tr(UI.set)}</li></ul>
+      </div>${tipsCard(TIPS.get)}
+      <div class="card" style="--cat:var(--c-travel)">
+        <h3>${esc(tr(UI.subTitle))}</h3>
+        <p class="desc">${esc(tr(UI.subIntro))}</p>
+        <ol class="steps"><li>${esc(tr(UI.sub1))}</li><li>${esc(tr(UI.sub2))}</li><li>${esc(tr(UI.sub3))}</li></ol>
+      </div>
+      <div class="card" style="--cat:var(--c-food)">
+        <h3>${esc(tr(UI.empTitle))}</h3>
+        <p class="desc">${esc(tr(UI.empText))}</p>
+        <div class="code"><span class="code-val" id="refcode">8LW36Y</span><button type="button" class="copy-btn" data-code="8LW36Y">${esc(tr(UI.copy))}</button></div>
+      </div>${bfCard()}
+    </div>`;
+}
+
+const ORDER = ["info"].concat(DAYS.map(d => d.id), ["ideas", "plan"]);
+let lastId = null;
+function currentId() {
+  const h = location.hash.slice(1);
+  return h === "ideas" || h === "info" || h === "plan" || DAYS.some(d => d.id === h) ? h : (todayId || DAYS[0].id);
+}
+function show(fromUser) {
+  const id = currentId();
+  renderTiles(id);
+  const view = document.getElementById("view");
+  let label;
+  if (id === "ideas") { label = tr(UI.more) + " " + tr(UI.ideas); view.innerHTML = renderIdeas(); }
+  else if (id === "plan") { label = tr(UI.planScript) + " " + tr(UI.planDate); view.innerHTML = renderPlan(); }
+  else if (id === "info") { label = tr(UI.infoScript) + " " + tr(UI.infoDate); view.innerHTML = renderInfo(); }
+  else { const d = DAYS.find(x => x.id === id), L = dayLabels(d); label = L.script + ", " + L.date; view.innerHTML = renderDay(d); }
+  const dir = lastId && lastId !== id ? Math.sign(ORDER.indexOf(id) - ORDER.indexOf(lastId)) : 0;
+  lastId = id;
+  view.classList.remove("slide-next", "slide-prev");
+  if (dir) { void view.offsetWidth; view.classList.add(dir > 0 ? "slide-next" : "slide-prev"); }
+  document.title = label + " · " + tr(UI.pageTitle);
+  if (fromUser) {
+    const nav = document.querySelector(".days");
+    const top = view.getBoundingClientRect().top + window.scrollY - nav.offsetHeight - 16;
+    if (window.scrollY > top) window.scrollTo({ top, behavior: "auto" });
+  }
+}
+
+function setStaticText() {
+  const set = (id, key, html) => { const el = document.getElementById(id); if (el) el[html ? "innerHTML" : "textContent"] = tr(UI[key]); };
+  set("h-greet", "greet"); set("h-title", "title"); set("h-sub", "sub", true);
+  set("pm1", "pm1"); set("pm2", "pm2"); set("pm3", "pm3");
+  set("f-sign", "sign"); set("f-text", "foot");
+  document.getElementById("nav").setAttribute("aria-label", tr(UI.nav));
+}
+
+function applyLang(l, persist) {
+  lang = l;
+  document.documentElement.lang = l === "zh" ? "zh-CN" : "en";
+  if (persist) { try { localStorage.setItem("nyc-lang", l); } catch (e) {} }
+  document.querySelectorAll(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l ? "true" : "false"));
+  setStaticText();
+  show(false);
+}
+
+function openMapSheet(q, name, trigger) {
+  const el = document.getElementById("mapsheet");
+  el._trigger = trigger;
+  const enc = encodeURIComponent(q);
+  el.querySelector(".ms-title").textContent = tr(UI.mapsTitle);
+  el.querySelector(".ms-dest").textContent = name;
+  const g = el.querySelector('[data-app="google"]'), a = el.querySelector('[data-app="apple"]');
+  g.href = "https://www.google.com/maps/dir/?api=1&destination=" + enc; g.textContent = tr(UI.google);
+  a.href = "https://maps.apple.com/?daddr=" + enc; a.textContent = tr(UI.apple);
+  el.querySelector(".ms-cancel").textContent = tr(UI.cancel);
+  el.hidden = false;
+  g.focus();
+}
+function closeMapSheet() {
+  const el = document.getElementById("mapsheet");
+  if (el.hidden) return;
+  el.hidden = true;
+  if (el._trigger && document.contains(el._trigger)) el._trigger.focus();
+}
+document.addEventListener("click", e => {
+  const btn = e.target.closest(".dir-btn");
+  if (btn) { openMapSheet(btn.dataset.q, btn.dataset.name, btn); return; }
+  const sheet = document.getElementById("mapsheet");
+  if (!sheet.hidden && (e.target === sheet || e.target.closest(".ms-cancel") || e.target.closest(".ms-opt"))) closeMapSheet();
+});
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeMapSheet(); });
+
+document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click", () => applyLang(b.dataset.lang, true)));
+document.addEventListener("click", async e => {
+  const b = e.target.closest(".copy-btn");
+  if (!b) return;
+  let ok = false;
+  try { await navigator.clipboard.writeText(b.dataset.code); ok = true; } catch (err) {}
+  if (!ok) {
+    try {
+      const r = document.createRange(); r.selectNodeContents(document.getElementById("refcode"));
+      const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      ok = document.execCommand("copy");
+    } catch (err) {}
+  }
+  b.textContent = ok ? tr(UI.copied) : tr(UI.copyFail);
+  setTimeout(() => { b.textContent = tr(UI.copy); }, 1800);
+});
+
+function goDay(step) {
+  const i = ORDER.indexOf(currentId()) + step;
+  if (i < 0 || i >= ORDER.length) return;
+  location.hash = ORDER[i];
+}
+let sx = 0, sy = 0, tracking = false;
+document.addEventListener("touchstart", e => {
+  if (e.touches.length !== 1 || e.target.closest(".days, .mapsheet, .lang-row")) { tracking = false; return; }
+  tracking = true; sx = e.touches[0].clientX; sy = e.touches[0].clientY;
+}, { passive: true });
+document.addEventListener("touchend", e => {
+  if (!tracking) return;
+  tracking = false;
+  const t = e.changedTouches[0], dx = t.clientX - sx, dy = t.clientY - sy;
+  if (Math.abs(dx) < 60 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+  goDay(dx < 0 ? 1 : -1);
+}, { passive: true });
+document.addEventListener("keydown", e => {
+  if (e.altKey || e.ctrlKey || e.metaKey || !document.getElementById("mapsheet").hidden) return;
+  if (e.key === "ArrowRight") goDay(1);
+  else if (e.key === "ArrowLeft") goDay(-1);
+});
+window.addEventListener("hashchange", () => show(true));
+applyLang(lang, false);
+
+/* Tiny falling snow */
+(function () {
+  const canvas = document.getElementById("snow");
+  const ctx = canvas.getContext("2d");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let w = 0, h = 0, flakes = [], raf = null, last = 0;
+
+  function make(anywhere) {
+    return {
+      x: Math.random() * w,
+      y: anywhere ? Math.random() * h : -4,
+      r: 0.6 + Math.random() * 1.3,
+      speed: 16 + Math.random() * 30,
+      alpha: 0.45 + Math.random() * 0.45,
+      phase: Math.random() * Math.PI * 2,
+      drift: 5 + Math.random() * 14
+    };
+  }
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = window.innerWidth; h = window.innerHeight;
+    canvas.width = Math.round(w * dpr); canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = Math.round(Math.min(110, Math.max(35, (w * h) / 9500)));
+    while (flakes.length < count) flakes.push(make(true));
+    flakes.length = count;
+  }
+  function frame(t) {
+    const dt = last ? Math.min(0.05, (t - last) / 1000) : 0;
+    last = t;
+    ctx.clearRect(0, 0, w, h);
+    ctx.fillStyle = "#FFFFFF";
+    for (const f of flakes) {
+      f.y += f.speed * dt;
+      f.phase += dt * 0.8;
+      if (f.y > h + 4) Object.assign(f, make(false));
+      ctx.globalAlpha = f.alpha;
+      ctx.beginPath();
+      ctx.arc(f.x + Math.sin(f.phase) * f.drift, f.y, f.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(frame);
+  }
+  function start() { if (raf || reduce.matches || document.hidden) return; last = 0; raf = requestAnimationFrame(frame); }
+  function stop() { if (raf) cancelAnimationFrame(raf); raf = null; ctx.clearRect(0, 0, w, h); }
+
+  resize();
+  window.addEventListener("resize", resize);
+  document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
+  if (reduce.addEventListener) reduce.addEventListener("change", () => reduce.matches ? stop() : start());
+  start();
+})();
+</script>
+</body>
+</html>
