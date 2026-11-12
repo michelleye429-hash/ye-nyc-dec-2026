@@ -566,6 +566,11 @@ const UI = {
   planScript: T("Still", "待办"),
   planDate: T("To Plan", "事项"),
   planIntro: T("Notes on what still needs to be planned. This page is temporary.", "还需要规划的事项备忘。这一页只是暂时的。"),
+  addrTitle: T("Quick Links: Addresses", "常用地址"),
+  hotelLabel: T("Your Hotel", "酒店"),
+  aptLabel: T("Michelle’s Apartment", "晓雪的公寓"),
+  aptArea: T("In Chelsea", "在切尔西区"),
+  copyAddr: T("Copy address", "复制地址"),
   mapsTitle: T("Open directions in…", "用哪个地图查看路线？"),
   google: T("Google Maps", "Google 地图"),
   apple: T("Apple Maps", "Apple 地图"),
@@ -627,11 +632,11 @@ const DAYS = [
       note: T("Pedestal Reserve for 5. Security check-in 1:30 PM, ferry departs 2:00 PM, last entrance to the statue 3:30 PM. Expect to be back at Battery Park around 5:00 PM. Arrive by 1:00 PM. Confirmation no. i88453813 / 88453812.", "底座预约票，共5张。安检签到下午1:30，下午2:00开船，最晚入场下午3:30。预计下午5:00左右回到 Battery Park（炮台公园）。请在下午1:00前到达。确认号：i88453813 / 88453812。"),
       links: [["site", "https://www.nps.gov/stli/"]] },
     { t: "5:15 PM", cat: "sight", title: T("Seaport View at Pier 17", "Pier 17 海港夜景"), name: "Pier 17, South Street Seaport", map: "Pier 17, 89 South St, New York, NY 10038",
-      note: T("About a 10-minute Uber from Battery Park. See the Brooklyn Bridge lit up from the piers, and warm up inside Pier 17, where the lower levels have windows facing the bridge. No dinner needed. Leave by 6:05 PM.", "从 Battery Park 打车约10分钟。可以在码头边欣赏亮灯的 Brooklyn Bridge，再进 Pier 17 室内取暖，下层有朝向大桥的窗户。不需要吃晚餐。请在下午6:05前离开。") },
-    { t: "6:30 PM", cat: "food", title: T("Dinner at Fish Cheeks", "Fish Cheeks 泰式海鲜餐厅晚餐"), name: "Fish Cheeks", map: "Fish Cheeks 55 Bond St, New York, NY 10012",
-      note: T("Tentative. A reservation has been requested but is not confirmed yet.", "暂定。已申请订位，但还没有确认。"),
+      note: T("Visit the Seaport only if you have time. About a 10-minute Uber from Battery Park. See the Brooklyn Bridge lit up from the piers, and warm up inside Pier 17. Keep it short and leave by 5:35 PM to make the 6:00 PM dinner. If you’re running late, go straight to Fish Cheeks.", "时间来得及的话再去 Seaport。从 Battery Park 打车约10分钟。可以在码头边欣赏亮灯的 Brooklyn Bridge，再进 Pier 17 室内取暖。请控制在20分钟内，下午5:35前离开，赶上6:00的晚餐。如果时间紧，就直接去 Fish Cheeks。") },
+    { t: "6:00 PM", cat: "food", title: T("Dinner at Fish Cheeks", "Fish Cheeks 泰式海鲜餐厅晚餐"), name: "Fish Cheeks", map: "Fish Cheeks 55 Bond St, New York, NY 10012",
+      note: T("Reservation made for 6:00 PM.", "已订好下午6:00的位子。"),
       desc: T("A Thai seafood restaurant known for bold, punchy flavors.", "以浓烈口味著称的泰式海鲜餐厅。") },
-    { t: "7:30 PM", cat: "food", title: T("Dessert at Levain Bakery", "Levain 面包店甜点"), name: "Levain Bakery", map: "Levain Bakery 340 Lafayette St, New York, NY 10012",
+    { t: "7:15 PM", cat: "food", title: T("Dessert at Levain Bakery", "Levain 面包店甜点"), name: "Levain Bakery", map: "Levain Bakery 340 Lafayette St, New York, NY 10012",
       note: T("About a 3-minute walk from Fish Cheeks.", "从 Fish Cheeks 步行约3分钟。"),
       desc: T("Famous for giant, gooey cookies; chocolate chip walnut is the classic.", "以超大个的软心曲奇闻名，经典口味是巧克力核桃。") }
   ]},
@@ -700,7 +705,9 @@ const DAYS = [
       note: T("Free, but a reservation is required for every guest. Reservations open about a week ahead (around Dec 3).", "免费，但每位客人都需要预约。预约大约提前一周开放（约12月3日）。") },
     { t: "5:15 PM", cat: "food", title: T("Dinner at Her Name Is Han", "Her Name Is Han 韩餐厅晚餐"), name: "Her Name Is Han", map: "Her Name Is Han 17 E 31st St, New York, NY 10016",
       note: T("Reservation made for 5:15 PM.", "已订好下午5:15的位子。"),
-      desc: T("A Korean restaurant known for comfort food like bossam (boiled pork wraps), kimchi pancake and sweet corn bingsu.", "以韩式家常菜闻名的韩餐厅，招牌有菜包肉、泡菜饼和甜玉米刨冰。") }
+      desc: T("A Korean restaurant known for comfort food like bossam (boiled pork wraps), kimchi pancake and sweet corn bingsu.", "以韩式家常菜闻名的韩餐厅，招牌有菜包肉、泡菜饼和甜玉米刨冰。") },
+    { t: "6:45 PM", cat: "sight", title: T("Double-Decker Christmas Carousel", "双层圣诞旋转木马"), name: "Double-Decker Christmas Carousel", map: "Greeley Square, 33rd St & Broadway, New York, NY 10001",
+      note: T("About a 7-minute walk from Her Name Is Han. Tickets are $10 per person, sold onsite only.", "从 Her Name Is Han 步行约7分钟。门票每人$10，只能现场购买。") }
   ]},
   { id: "dec-11", iso: "2026-12-11", wd: "Fri", wdZh: "周五", num: 11, note: T("Travel day", "出行日"), items: [
     { t: "8:00 AM", cat: "travel", title: T("Uber to the Airport", "打车去机场") },
@@ -711,6 +718,8 @@ const DAYS = [
 
 const IDEAS = [
   { title: UI.seeTitle, items: [
+    { name: "Union Square Holiday Market", zh: "联合广场节日集市", map: "Union Square Holiday Market, 201 Park Ave S, New York, NY 10003",
+      note: T("A large holiday market with more than 150 vendors, open Nov 12 to Dec 24. It’s about 8 blocks from the Harry Potter Shop.", "Union Square 的大型节日集市，有150多家摊位，11月12日至12月24日开放。离 Harry Potter Shop 大约8个街区。") },
     { name: "Harry Potter Shop New York", zh: "哈利·波特商店", map: "Harry Potter Shop New York 935 Broadway, New York, NY 10010",
       note: T("In the Flatiron area. Thursday is full now, so it could fit another day.", "位于 Flatiron 一带。周四已经排满，可以另找一天去。") },
     { name: "Time Out Market Rooftop", zh: "Time Out Market 屋顶", map: "Time Out Market New York, 55 Water St, Brooklyn, NY 11201",
@@ -818,7 +827,6 @@ const PLAN = [
     T("Sat Dec 5: Giulietta at 9:00 PM has no reservation yet. They charge for changes, but weekends seem to have plenty of availability.", "12月5日（周六）：晚上9:00的 Giulietta 还没订位。他们改期会收费，不过周末看起来空位很多。"),
     T("Sun Dec 6: Central Park Boathouse lunch at 12:00 PM. Reservations open Nov 15 at 12:00 AM ET (a reminder is in the calendar file).", "12月6日（周日）：中午12:00的 Central Park Boathouse 午餐。11月15日东部时间凌晨12:00开放订位（提醒已在日历文件里）。"),
     T("Sun Dec 6: Buy tickets for The Lion King at 6:30 PM.", "12月6日（周日）：购买下午6:30 The Lion King 的票。"),
-    T("Mon Dec 7: Dinner at Fish Cheeks at 6:30 PM is tentative. A reservation has been requested but not confirmed yet.", "12月7日（周一）：下午6:30的 Fish Cheeks 晚餐是暂定的。已申请订位，但还没有确认。"),
     T("Mon Dec 7: Lunch at Toro Loco is tentative. Confirm it or choose another place.", "12月7日（周一）：Toro Loco 的午餐是暂定的，请确认或另选一家。"),
     T("Tue Dec 8: Buy tickets for the Rockettes show at 2:00 PM.", "12月8日（周二）：购买下午2:00 Rockettes 演出的票。"),
     T("Thu Dec 10: Reserve Macy’s Santaland for around 3:00 PM. Reservations are free and open about a week ahead (around Dec 3).", "12月10日（周四）：预约下午3:00左右的 Macy’s Santaland。预约免费，大约提前一周开放（约12月3日）。"),
@@ -833,6 +841,7 @@ const PLAN = [
   { color: "var(--c-travel)", mark: "done", title: T("Already Confirmed", "已确认"), items: [
     T("Sun Dec 6: Dinner at Mountain House at 5:00 PM is booked.", "12月6日（周日）：下午5:00的 Mountain House 晚餐已订好。"),
     T("Mon Dec 7: Statue of Liberty Pedestal Reserve for 5. Ferry departs at 2:00 PM.", "12月7日（周一）：Statue of Liberty 底座预约票5张，下午2:00开船。"),
+    T("Mon Dec 7: Reservation made at Fish Cheeks for 6:00 PM.", "12月7日（周一）：已订好下午6:00的 Fish Cheeks。"),
     T("Tue Dec 8: Lunch reservation at Ci Siamo for 12:15 PM.", "12月8日（周二）：已订好中午12:15的 Ci Siamo 午餐。"),
     T("Wed Dec 9: Reservation made at La Grande Boucherie for 12:30 PM.", "12月9日（周三）：已订好中午12:30的 La Grande Boucherie。"),
     T("Thu Dec 10: Reservation made at Her Name Is Han for 5:15 PM.", "12月10日（周四）：已订好下午5:15的 Her Name Is Han。")
@@ -979,6 +988,32 @@ function tipsCard(t) {
       </div>`;
 }
 
+const ADDRS = [
+  { label: "hotelLabel", line: "Residence Inn by Marriott, Midtown East · 148 E 48th St, New York, NY 10017",
+    map: "Residence Inn by Marriott New York Manhattan/Midtown East, 148 E 48th St, New York, NY 10017",
+    copy: "148 E 48th St, New York, NY 10017" },
+  { label: "aptLabel", lineKey: "aptArea",
+    map: "261 West 24th Street, New York, NY 10011",
+    copy: "261 West 24th Street, New York, NY 10011" }
+];
+
+function addrCard() {
+  return `
+      <div class="card" style="--cat:var(--c-travel)">
+        <h3>${esc(tr(UI.addrTitle))}</h3>
+        <ul class="bf-list">${ADDRS.map(a => `
+          <li class="bf">
+            <h4>${esc(tr(UI[a.label]))}</h4>
+            <p class="note">${esc(a.line || tr(UI[a.lineKey]))}</p>
+            <div class="links">
+              <button type="button" class="dir-btn" data-q="${esc(a.map)}" data-name="${esc(tr(UI[a.label]))}">${esc(tr(UI.dir))}</button>
+              <button type="button" class="copy-btn" data-code="${esc(a.copy)}" data-label="copyAddr">${esc(tr(UI.copyAddr))}</button>
+            </div>
+          </li>`).join("")}
+        </ul>
+      </div>`;
+}
+
 function bfCard() {
   return `
       <div class="card" style="--cat:var(--c-food)">
@@ -1002,7 +1037,7 @@ function renderInfo() {
       <h2><span class="script">${esc(tr(UI.infoScript))}</span><span class="date">${esc(tr(UI.infoDate))}</span></h2>
       <p class="intro">${esc(tr(UI.infoIntro))}</p>
     </div>
-    <div class="info-list">
+    <div class="info-list">${addrCard()}
       <div class="card" style="--cat:var(--c-sight)">
         <h3>${esc(tr(UI.wxTitle))}</h3>
         <ul class="plain"><li>${tr(UI.temp)}</li><li>${tr(UI.rise)}</li><li>${tr(UI.set)}</li></ul>
@@ -1095,17 +1130,21 @@ document.querySelectorAll(".lang button").forEach(b => b.addEventListener("click
 document.addEventListener("click", async e => {
   const b = e.target.closest(".copy-btn");
   if (!b) return;
+  const text = b.dataset.code;
   let ok = false;
-  try { await navigator.clipboard.writeText(b.dataset.code); ok = true; } catch (err) {}
+  try { await navigator.clipboard.writeText(text); ok = true; } catch (err) {}
   if (!ok) {
     try {
-      const r = document.createRange(); r.selectNodeContents(document.getElementById("refcode"));
-      const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      const ta = document.createElement("textarea");
+      ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+      document.body.appendChild(ta); ta.select();
       ok = document.execCommand("copy");
+      ta.remove();
     } catch (err) {}
   }
+  const key = b.dataset.label || "copy";
   b.textContent = ok ? tr(UI.copied) : tr(UI.copyFail);
-  setTimeout(() => { b.textContent = tr(UI.copy); }, 1800);
+  setTimeout(() => { b.textContent = tr(UI[key]); }, 1800);
 });
 
 function goDay(step) {
