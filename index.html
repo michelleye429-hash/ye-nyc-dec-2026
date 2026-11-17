@@ -334,7 +334,7 @@ footer .sign { display: block; font-family: var(--script-font); font-size: 1.9re
 .links button {
   display: inline-flex; align-items: center; min-height: 44px; padding: .4rem 1rem; border-radius: 999px;
   background: var(--paper-2); border: 1px solid var(--line); color: var(--ink);
-  font: inherit; font-weight: 700; font-size: .98rem; cursor: pointer;
+  font: inherit; font-weight: 700; font-size: .98rem; cursor: pointer; white-space: nowrap;
 }
 .links button:hover { text-decoration: underline; }
 .links button:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
@@ -603,13 +603,16 @@ const DAYS = [
       note: T("Walk from the zoo to the lake.", "从 Central Park Zoo 步行前往湖边。"),
       links: [["site", "https://www.centralparknyc.org"]] },
     { t: "12:00 PM", cat: "food", title: T("Central Park Boathouse", "中央公园船屋餐厅"), name: "Central Park Boathouse", map: "Loeb Boathouse Central Park",
+      note: T("Reservation made for 12:00 PM.", "已订好中午12:00的位子。"),
       desc: T("A lakeside restaurant in the park with views toward the Midtown skyline.", "公园里的湖边餐厅，可以眺望中城的天际线。") },
     { t: "1:15 PM", cat: "travel", title: T("Back to the Hotel", "回酒店"), name: "Residence Inn by Marriott, Midtown East", map: "Residence Inn by Marriott New York Manhattan/Midtown East, 148 E 48th St, New York, NY 10017", note: T("Rest and nap time for Evie.", "让爱文休息午睡。") },
     { ...NAP, note: T("Around 1:30–3:00 PM, flexible", "大约下午1:30–3:00，可灵活调整") },
     { t: "3:00 PM", cat: "sight", solo: true, title: T("Times Square", "时代广场"), name: "Times Square", map: "Times Square, New York",
       note: T("Stops to hit: M&M’s World and the Disney Store. M&M’s World has restrooms.", "推荐逛：M&M’s World 和 Disney Store。M&M’s World 里有洗手间。") },
-    { t: "5:00 PM", cat: "food", title: T("Dinner at Mountain House", "川山甲晚餐"), name: "Mountain House 川山甲", map: "Mountain House 353 W 46th St New York",
-      desc: T("A Sichuan restaurant near Times Square, known for bold, numbing-spicy flavors.", "离 Times Square 不远的川菜馆，以麻辣鲜香闻名。") },
+    { t: "4:45 PM", cat: "food", title: T("Dinner: Carmine’s or Mountain House", "晚餐：Carmine’s 或 Mountain House"),
+      note: T("Carmine’s (44th St) at 4:45 PM or Mountain House at 5:00 PM. Both are booked, and we’ll pick one.", "Carmine’s（西44街）下午4:45，或 Mountain House 下午5:00。两家都已订好，之后选一家。"),
+      desc: T("Carmine’s serves big family-style Italian platters. Mountain House is a Sichuan restaurant known for bold, numbing-spicy flavors.", "Carmine’s 是菜量很大的意大利餐厅，适合大家分着吃。Mountain House 是川菜馆，以麻辣鲜香闻名。"),
+      maps: [["Carmine’s", "Carmine's 44th Street New York"], ["Mountain House", "Mountain House 353 W 46th St New York"]] },
     { t: "6:30 PM", cat: "show", title: T("The Lion King", "《狮子王》音乐剧"), name: "The Lion King · Minskoff Theatre", map: "Minskoff Theatre, 200 W 45th St, New York",
       note: T("Minskoff Theatre, 200 W 45th St. Runs about 2½ hours.", "Minskoff Theatre，西45街200号。演出约2.5小时。"),
       links: [["show", "https://broadwaydirect.com/show/the-lion-king/"]] }
@@ -657,7 +660,6 @@ const DAYS = [
     { t: "1:15 PM", cat: "travel", title: T("Back to the Hotel", "回酒店"), name: "Residence Inn by Marriott, Midtown East", map: "Residence Inn by Marriott New York Manhattan/Midtown East, 148 E 48th St, New York, NY 10017",
       note: T("Rest and nap time for Evie.", "让爱文休息午睡。") },
     NAP,
-    { t: "1:30 PM", cat: "sight", title: T("The Plaza Hotel", "广场酒店"), name: "The Plaza Hotel", map: "The Plaza Hotel New York" },
     { t: "2:00 PM", cat: "show", title: T("Radio City Christmas Spectacular", "无线电城圣诞盛会"), name: "Radio City Christmas Spectacular", map: "Radio City Music Hall",
       note: T("The Rockettes, at Radio City Music Hall.", "火箭女郎表演，在无线电城音乐厅。"),
       links: [["show", "https://www.rockettes.com"]] },
@@ -725,13 +727,15 @@ const IDEAS = [
     { name: "Time Out Market Rooftop", zh: "Time Out Market 屋顶", map: "Time Out Market New York, 55 Water St, Brooklyn, NY 11201",
       note: T("In DUMBO, with rooftop views of the Brooklyn Bridge, the Manhattan Bridge and the skyline. Open until 10 PM on weekdays. Check the rooftop’s age policy and winter hours first.", "位于 DUMBO，屋顶可以看到 Brooklyn Bridge、Manhattan Bridge 和天际线。工作日营业到晚上10点。去之前请先确认屋顶的年龄限制和冬季开放时间。") },
     { name: "Flatiron Building", zh: "熨斗大厦", map: "Flatiron Building, New York" },
+    { name: "The Plaza Hotel", zh: "广场酒店", map: "The Plaza Hotel New York",
+      note: T("You can only go inside before 8 AM, so it’s best seen from the outside.", "只有早上8点前才能进入，所以更适合在外面看看。") },
     { name: "American Museum of Natural History", zh: "美国自然历史博物馆", map: "American Museum of Natural History", link: ["site", "https://www.amnh.org"] },
     { name: "CAMP", zh: "CAMP 儿童游乐空间", map: "CAMP 110 5th Ave New York", link: ["site", "https://camp.com/locations/fifth-ave-nyc"],
       note: T("A play area for kids, in case the little one wants some fun.", "儿童游乐空间，适合带小朋友去玩。") }
   ]},
   { title: UI.eatTitle, items: [
     { name: "Carmine’s (44th St)", zh: "Carmine’s 意大利餐厅（西44街）", map: "Carmine's 44th Street New York",
-      note: T("Michelle has a 12 PM reservation, Monday through Thursday. Day to be decided.", "晓雪订了中午12点的位子，周一至周四均可，日期待定。"),
+      note: T("Michelle has a 12 PM reservation, Monday through Thursday, day to be decided. There is also a 4:45 PM booking on Sunday (see Sunday).", "晓雪订了中午12点的位子，周一至周四均可，日期待定。周日下午4:45也订了一桌（见周日行程）。"),
       desc: T("Big family-style Italian platters made for sharing.", "菜量很大的意大利餐厅，适合一大家子分着吃。") },
     { name: "Rolf’s", zh: "Rolf’s 德国餐厅", map: "Rolf's Bar & Restaurant New York",
       note: T("For drinks after lunch or dinner.", "适合午饭或晚饭后去喝一杯。"),
@@ -825,7 +829,6 @@ const PLAN = [
   ]},
   { color: "var(--c-show)", mark: "todo", title: T("Not Confirmed Yet", "尚未确认"), items: [
     T("Sat Dec 5: Giulietta at 9:00 PM has no reservation yet. They charge for changes, but weekends seem to have plenty of availability.", "12月5日（周六）：晚上9:00的 Giulietta 还没订位。他们改期会收费，不过周末看起来空位很多。"),
-    T("Sun Dec 6: Central Park Boathouse lunch at 12:00 PM. Reservations open Nov 15 at 12:00 AM ET (a reminder is in the calendar file).", "12月6日（周日）：中午12:00的 Central Park Boathouse 午餐。11月15日东部时间凌晨12:00开放订位（提醒已在日历文件里）。"),
     T("Sun Dec 6: Buy tickets for The Lion King at 6:30 PM.", "12月6日（周日）：购买下午6:30 The Lion King 的票。"),
     T("Mon Dec 7: Lunch at Toro Loco is tentative. Confirm it or choose another place.", "12月7日（周一）：Toro Loco 的午餐是暂定的，请确认或另选一家。"),
     T("Tue Dec 8: Buy tickets for the Rockettes show at 2:00 PM.", "12月8日（周二）：购买下午2:00 Rockettes 演出的票。"),
@@ -839,7 +842,8 @@ const PLAN = [
     T("Adells in More Ideas still needs to be identified.", "“更多推荐”里的 Adells 还需要确认是哪家餐厅。")
   ]},
   { color: "var(--c-travel)", mark: "done", title: T("Already Confirmed", "已确认"), items: [
-    T("Sun Dec 6: Dinner at Mountain House at 5:00 PM is booked.", "12月6日（周日）：下午5:00的 Mountain House 晚餐已订好。"),
+    T("Sun Dec 6: Reservation made at Central Park Boathouse for 12:00 PM.", "12月6日（周日）：已订好中午12:00的 Central Park Boathouse。"),
+    T("Sun Dec 6: Dinner is booked at both Carmine’s (4:45 PM) and Mountain House (5:00 PM). Keep both for now, and cancel one later.", "12月6日（周日）：Carmine’s（下午4:45）和 Mountain House（下午5:00）都已订好。暂时两个都留着，之后取消一个。"),
     T("Mon Dec 7: Statue of Liberty Pedestal Reserve for 5. Ferry departs at 2:00 PM.", "12月7日（周一）：Statue of Liberty 底座预约票5张，下午2:00开船。"),
     T("Mon Dec 7: Reservation made at Fish Cheeks for 6:00 PM.", "12月7日（周一）：已订好下午6:00的 Fish Cheeks。"),
     T("Tue Dec 8: Lunch reservation at Ci Siamo for 12:15 PM.", "12月8日（周二）：已订好中午12:15的 Ci Siamo 午餐。"),
@@ -892,6 +896,7 @@ function renderTiles(current) {
 function linksHtml(item, name) {
   const links = [];
   if (item.map) links.push(`<button type="button" class="dir-btn" data-q="${esc(item.map)}" data-name="${esc(name)}">${esc(tr(UI.dir))}</button>`);
+  (item.maps || []).forEach(([label, q]) => links.push(`<button type="button" class="dir-btn" data-q="${esc(q)}" data-name="${esc(label)}">${esc(label)} ${esc(tr(UI.dir))}</button>`));
   (item.links || []).forEach(([key, url]) => links.push(`<a href="${url}" target="_blank" rel="noopener">${esc(tr(LINKS[key]))}</a>`));
   return links.length ? `<div class="links">${links.join("")}</div>` : "";
 }
